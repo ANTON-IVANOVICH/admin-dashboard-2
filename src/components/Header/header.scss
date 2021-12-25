@@ -1,0 +1,38 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 50px;
+
+  h2 {
+    margin: 0;
+  }
+
+  &__right {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &_username {
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: -10px;
+        width: 1px;
+        height: 100%;
+        background-color: gray;
+      }
+    }
+
+    &_user_avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+  }
+}

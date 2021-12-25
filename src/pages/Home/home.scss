@@ -1,0 +1,11 @@
+.container {
+  padding: 30px;
+  width: 85%;
+  background-color: #F7F8FC;
+
+  .info_container {
+    display: flex;
+    width: calc(100% - 30px);
+    height: 270px;
+  }
+}

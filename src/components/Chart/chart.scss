@@ -1,0 +1,16 @@
+.chart {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 400px;
+  width: calc(100% - 30px);
+  padding: 30px;
+  margin-bottom: 30px;
+  border: 1px solid #DFE0EB;
+  border-radius: 10px;
+  background-color: #fff;
+
+  h3 {
+    margin: 0;
+  }
+}

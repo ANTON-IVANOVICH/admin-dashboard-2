@@ -1,0 +1,84 @@
+.sidebar {
+  padding-top: 30px;
+  width: 15%;
+  height: 100vh;
+  background-color: #363740;
+
+  &__logo {
+    margin-left: 35px;
+    color: #A4A6B3;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 24px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  &__list {
+    padding: 0;
+    padding-top: 30px;
+    margin: 0;
+    list-style: none;
+
+    &_item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+
+      &::after {
+        content: '';
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background-color: #ced0e0;
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 3px;
+        height: 100%;
+        background-color: white;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      &:hover::before {
+        opacity: 1;
+      }
+
+      &:hover::after {
+        opacity: 0.2;
+      }
+    }
+
+    &_item:hover &_link {
+      color: white;
+    }
+
+    &_link {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      padding: 17px;
+      color: #A4A6B3;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      cursor: pointer;
+      transition: color 0.3s ease-in-out;
+      z-index: 100;
+      text-decoration: none;
+    }
+  }
+}
