@@ -3,7 +3,7 @@ import { Post } from '../models/Post';
 
 export const postAPI = createApi({
   reducerPath: 'postAPI',
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3001' }),
+  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:5000' }),
   tagTypes: ['Post'], // мгновенная подгрузка обновленных данных
   endpoints: (build) => ({
     fetchAllUsers: build.query({

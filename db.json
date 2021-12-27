@@ -2,162 +2,34 @@
   "posts": [
     {
       "id": 1,
-      "title": "it is a mistake",
-      "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, voluptatibus?"
+      "avatar": "https://www.film.ru/sites/default/files/filefield_paths/shutterstock_9669042a.jpg",
+      "author": "Milana",
+      "title": "World problems",
+      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum cum magni eveniet error animi? Iure, libero? Cumque iure fuga quae."
     },
     {
       "id": 2,
-      "title": "it is a mistake 2",
-      "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis, nam."
+      "avatar": "https://i0.wp.com/post.healthline.com/wp-content/uploads/2021/02/Female_Portrait_1296x728-header-1296x729.jpg?w=1155&h=2268",
+      "author": "John",
+      "title": "Ecological troubles",
+      "body": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi."
     },
     {
       "id": 3,
-      "title": "it is a mistake 3",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2RHj5aBArvQQQtkpqkJU3MzDrr2ji2rg00w&usqp=CAU",
+      "author": "Victor",
+      "title": "My trip",
       "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, est."
     },
     {
       "id": 4,
-      "title": "it is a mistake 4",
-      "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque, necessitatibus numquam."
-    },
-    {
-      "id": 5,
-      "title": "it is a mistake 5",
-      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci?"
-    },
-    {
-      "id": 6,
-      "title": "it is a mistake 6",
-      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae!"
-    },
-    {
-      "id": 7,
-      "title": "it is a mistake 7",
-      "body": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi, ab voluptatem."
-    },
-    {
-      "id": 8,
-      "title": "it is a mistake 8",
-      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos placeat illum magni."
-    },
-    {
-      "id": 9,
-      "title": "it is a mistake 9",
-      "body": "Lorem ipsum dolor sit amet consectetur adipisicing."
-    },
-    {
-      "id": 10,
-      "title": "it is a mistake 10",
-      "body": "lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum molestias esse in?"
-    },
-    {
-      "id": 11,
-      "title": "it is a mistake 11",
-      "body": "lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum molestias esse in?"
-    },
-    {
-      "id": 12,
-      "title": "it is a mistake 12",
-      "body": "lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum molestias esse in?"
-    },
-    {
-      "id": 13,
-      "title": "it is a mistake 13",
-      "body": "lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum molestias esse in?"
-    },
-    {
-      "id": 14,
-      "title": "it is a mistake 14",
-      "body": "lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum molestias esse in?"
-    },
-    {
-      "id": 15,
-      "title": "it is a mistake 15",
-      "body": "lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum molestias esse in?"
-    },
-    {
-      "id": 16,
-      "title": "it is a mistake 16",
-      "body": "lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum molestias esse in?"
-    },
-    {
-      "id": 17,
-      "title": "it is a mistake 17",
-      "body": "lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum molestias esse in?"
-    },
-    {
-      "id": 18,
-      "title": "it is a mistake 18",
-      "body": "lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum molestias esse in?"
-    },
-    {
-      "id": 19,
-      "title": "it is a mistake 19",
-      "body": "lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum molestias esse in?"
-    },
-    {
-      "id": 20,
-      "title": "it is a mistake 20",
-      "body": "lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum molestias esse in?"
-    },
-    {
-      "id": 21,
-      "title": "it is a mistake 21",
-      "body": "lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum molestias esse in?"
-    },
-    {
-      "id": 22,
-      "title": "it is a mistake 22",
-      "body": "lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum molestias esse in?"
-    },
-    {
-      "id": 23,
-      "title": "it is a mistake 23",
-      "body": "lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum molestias esse in?"
-    },
-    {
-      "id": 24,
-      "title": "it is a mistake 24",
-      "body": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus, facere repudiandae."
-    },
-    {
-      "id": 441,
-      "title": "123",
-      "body": "234"
-    },
-    {
-      "id": 953,
-      "title": "123",
-      "body": "234"
-    },
-    {
-      "id": 906,
-      "title": "555",
-      "body": "555"
-    },
-    {
-      "id": 106,
-      "title": "ррррр",
-      "body": "рррр"
-    },
-    {
-      "id": 315,
-      "title": "лждлж",
-      "body": "одолдолд"
-    },
-    {
-      "id": 360,
-      "title": "22",
-      "body": "22"
+      "avatar": "https://www.tampabay.com/resizer/_NX0W08JY9BCxcO8aWSyleJKKNY=/1600x900/smart/cloudfront-us-east-1.images.arcpublishing.com/tbt/SYEHICTK45ADDGJKC36PZRNMT4.jpg",
+      "author": "Tony",
+      "title": "This is my title",
+      "body": "This is my body - content"
     }
   ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
+  "comments": [],
   "profile": {
     "name": "typicode"
   }

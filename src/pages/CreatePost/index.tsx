@@ -5,15 +5,13 @@ import { postAPI } from '../../services/PostService';
 import './createPost.scss';
 
 const CreatePost: FC = () => {
-  const [title, setTitle] = useState('');
-  const [body, setBody] = useState('');
+  const [post, setPost] = useState({} as Post);
   const [createPost, { data: posts, error, isLoading }] = postAPI.useCreatePostMutation();
 
   const addNewPost = async (e: React.FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    await createPost({ id: Math.floor(Math.random() * 1000), title, body } as Post)
-    setTitle('');
-    setBody('');
+    await createPost({ ...post, id: Math.floor(Math.random() * 1000) } as Post)
+    setPost({ author: '', title: '', body: '' } as Post)
   }
 
   if (isLoading) return <h1>Loading...</h1>;
@@ -24,25 +22,23 @@ const CreatePost: FC = () => {
     <div className='container'>
       <Header/>
       <form>
-        <input 
-          value={title} 
-          onChange={e => setTitle(e.target.value)} 
+        <input
+          value={post.author}
+          onChange={e => setPost({...post, author: e.target.value})}
+          placeholder='author'
+        />
+        <input
+          value={post.title}
+          onChange={e => setPost({...post, title: e.target.value})}
           placeholder='title'
         />
-        <input 
-          value={body} 
-          onChange={e => setBody(e.target.value)} 
+        <input
+          value={post.body}
+          onChange={e => setPost({...post, body: e.target.value})}
           placeholder='body'
         />
         <button onClick={addNewPost}>submit</button>
       </form>
-      <ul>
-      {
-        posts && posts.map((post: Post) => 
-          <li>{post.id} | {post.title} | {post.body}</li>
-        )
-      }
-      </ul>
     </div>
   );
 };
