@@ -1,12 +1,12 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/dist/query/react';
-import { Post } from '../models/Post';
+import { Post } from '../../models/Post';
 
 export const postAPI = createApi({
   reducerPath: 'postAPI',
   baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:5000' }),
   tagTypes: ['Post'], // мгновенная подгрузка обновленных данных
   endpoints: (build) => ({
-    fetchAllUsers: build.query({
+    fetchAllPosts: build.query({
       query: () => ({
         url: '/posts'
       }),

@@ -15,11 +15,11 @@ const Sidebar: FC = () => {
         </li>
         <li className="sidebar__list_item">
           <EmojiObjectsOutlined/>
-          <a className="sidebar__list_link">Products</a>
+          <Link to='/products' className="sidebar__list_link">Products</Link>
         </li>
         <li className="sidebar__list_item">
           <ConfirmationNumberOutlined/>
-          <a className="sidebar__list_link">Create Product</a>
+          <Link to='/createproduct' className="sidebar__list_link">Create Product</Link>
         </li>
         <li className="sidebar__list_item">
           <PeopleAltOutlined/>
@@ -27,7 +27,7 @@ const Sidebar: FC = () => {
         </li>
         <li className="sidebar__list_item">
           <AccountCircleOutlined/>
-          <a className="sidebar__list_link">Create User</a>
+          <Link to='/createuser' className="sidebar__list_link">Create User</Link>
         </li>
         <li className="sidebar__list_item">
           <LoyaltyOutlined/>

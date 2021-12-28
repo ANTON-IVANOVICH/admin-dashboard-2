@@ -1,11 +1,39 @@
 import { FC } from 'react';
 import { Notifications, Search } from '@material-ui/icons'
 import './header.scss';
+import { useLocation } from 'react-router-dom';
 
 const Header: FC = () => {
+  const { pathname } = useLocation();
+  let title = 'Overview';
+
+  switch (pathname) {
+    case '/products':
+      title = 'Products';
+      break;
+    case '/createproduct':
+      title = 'Create Product';
+      break;
+    case '/posts':
+      title = 'Posts';
+      break;
+    case '/createpost':
+      title = 'Create Post';
+      break;
+    case '/users':
+      title = 'Users';
+      break;
+    case '/createuser':
+      title = 'Create User';
+      break;
+    default:
+      title = 'Overview';
+      break;
+  }
+
   return (
     <div className='header'>
-      <h2>Overview</h2>
+      <h2>{title}</h2>
       <div className="header__right">
         <Search/>
         <Notifications/>
