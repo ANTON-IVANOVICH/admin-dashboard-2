@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/dist/query/react';
-import { User } from '../../models/User';
+import { IUser } from '../../models/IUser';
 
 export const userAPI = createApi({
   reducerPath: 'userAPI',
@@ -7,12 +7,10 @@ export const userAPI = createApi({
   tagTypes: ['User'], // мгновенная подгрузка обновленных данных
   endpoints: (build) => ({
     fetchAllUsers: build.query({
-      query: () => ({
-        url: '/users'
-      }),
-      providesTags: result => ['User'] //мгновенная подгрузка обновленных данных
+      query: () => '/users',
+      providesTags: ['User'] //мгновенная подгрузка обновленных данных
     }),
-    createUser: build.mutation<User, User>({
+    createUser: build.mutation<IUser, IUser>({
       query: (user) => ({
         url: '/users',
         method: 'POST',
@@ -20,7 +18,7 @@ export const userAPI = createApi({
       }),
       invalidatesTags: ['User'] // мгновенная подгрузка обновленных данных
     }),
-    updateUser: build.mutation<User, User>({
+    updateUser: build.mutation<IUser, IUser>({
       query: (user) => ({
         url: `/users/${user.id}`,
         method: 'PUT',
@@ -28,7 +26,7 @@ export const userAPI = createApi({
       }),
       invalidatesTags: ['User']
     }),
-    deleteUser: build.mutation<User, User>({
+    deleteUser: build.mutation<IUser, IUser>({
       query: (user) => ({
         url: `/users/${user.id}`,
         method: 'DELETE',

@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/dist/query/react';
-import { Product } from '../../models/Product';
+import { IProduct } from '../../models/IProduct';
 
 export const productAPI = createApi({
   reducerPath: 'productAPI',
@@ -7,12 +7,10 @@ export const productAPI = createApi({
   tagTypes: ['Product'], // мгновенная подгрузка обновленных данных
   endpoints: (build) => ({
     fetchAllProducts: build.query({
-      query: () => ({
-        url: '/products'
-      }),
-      providesTags: result => ['Product'] //мгновенная подгрузка обновленных данных
+      query: () => '/products',
+      providesTags: ['Product'] //мгновенная подгрузка обновленных данных
     }),
-    createProduct: build.mutation<Product, Product>({
+    createProduct: build.mutation<IProduct, IProduct>({
       query: (product) => ({
         url: '/products',
         method: 'POST',
@@ -20,7 +18,7 @@ export const productAPI = createApi({
       }),
       invalidatesTags: ['Product'] // мгновенная подгрузка обновленных данных
     }),
-    updateProduct: build.mutation<Product, Product>({
+    updateProduct: build.mutation<IProduct, IProduct>({
       query: (product) => ({
         url: `/products/${product.id}`,
         method: 'PUT',
@@ -28,7 +26,7 @@ export const productAPI = createApi({
       }),
       invalidatesTags: ['Product']
     }),
-    deleteProduct: build.mutation<Product, Product>({
+    deleteProduct: build.mutation<IProduct, IProduct>({
       query: (product) => ({
         url: `/products/${product.id}`,
         method: 'DELETE',

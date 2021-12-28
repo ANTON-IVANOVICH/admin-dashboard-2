@@ -1,0 +1,15 @@
+.userslist {
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 20px;
+
+  h2 {
+    margin: 0 0 15px 0;
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0 0 20px 0;
+    list-style: none;
+  }
+}

@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/dist/query/react';
-import { Post } from '../../models/Post';
+import { IPost } from '../../models/IPost';
 
 export const postAPI = createApi({
   reducerPath: 'postAPI',
@@ -7,12 +7,10 @@ export const postAPI = createApi({
   tagTypes: ['Post'], // мгновенная подгрузка обновленных данных
   endpoints: (build) => ({
     fetchAllPosts: build.query({
-      query: () => ({
-        url: '/posts'
-      }),
-      providesTags: result => ['Post'] //мгновенная подгрузка обновленных данных
+      query: () => '/posts',
+      providesTags: ['Post'] //мгновенная подгрузка обновленных данных
     }),
-    createPost: build.mutation<Post, Post>({
+    createPost: build.mutation<IPost, IPost>({
       query: (post) => ({
         url: '/posts',
         method: 'POST',
@@ -20,7 +18,7 @@ export const postAPI = createApi({
       }),
       invalidatesTags: ['Post'] // мгновенная подгрузка обновленных данных
     }),
-    updatePost: build.mutation<Post, Post>({
+    updatePost: build.mutation<IPost, IPost>({
       query: (post) => ({
         url: `/posts/${post.id}`,
         method: 'PUT',
@@ -28,7 +26,7 @@ export const postAPI = createApi({
       }),
       invalidatesTags: ['Post']
     }),
-    deletePost: build.mutation<Post, Post>({
+    deletePost: build.mutation<IPost, IPost>({
       query: (post) => ({
         url: `/posts/${post.id}`,
         method: 'DELETE',

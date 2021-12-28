@@ -36,25 +36,11 @@
       "id": 320
     },
     {
-      "author": "123",
-      "title": "123",
-      "body": "123",
-      "avatar": "https://upload.wikimedia.org/wikipedia/commons/6/67/User_Avatar.png",
-      "id": 62
-    },
-    {
       "author": "Batya",
       "title": "I am Batya",
       "body": "Hi Bitches",
       "avatar": "https://dz2cdn2.dzone.com/storage/user-avatar/534373-thumb.jpg",
       "id": 370
-    },
-    {
-      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa0IgsD8mh0zKOPWYh0JY2eLORi6MQPX-7STbhwL4PBSwWuXjgsB926QRkXpZYkQFxvJA&usqp=CAU",
-      "author": "Kelly",
-      "title": "fsFSDf",
-      "body": "fsdfsdfsd",
-      "id": 360
     }
   ],
   "products": [
@@ -62,29 +48,29 @@
       "id": 1,
       "title": "IPhone 100S",
       "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZHVjdHxlbnwwfHwwfHw%3D&w=1000&q=80",
-      "count": 3,
-      "price": 100500
+      "count": "3",
+      "price": "100500"
     },
     {
       "id": 2,
       "title": "Nokia",
       "image": "https://images.pexels.com/photos/2536965/pexels-photo-2536965.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "count": 5,
-      "price": 100
+      "count": "5",
+      "price": "100"
     },
     {
       "id": 3,
       "title": "Panasonic",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREf48ilESASX02ivLsP2VyOz8O42vdYzc0uQ&usqp=CAU",
-      "count": 1,
-      "price": 1000
+      "count": "1",
+      "price": "1000"
     },
     {
       "id": 4,
       "title": "Hummer",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRng2PqbpSm1DkB05E4jDZvN-gquUTCkGX-Q&usqp=CAU",
-      "count": 2,
-      "price": 50000
+      "count": "2",
+      "price": "50000"
     }
   ],
   "users": [

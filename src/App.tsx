@@ -1,8 +1,12 @@
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
-import CreateItem from './pages/CreateItem';
+import CreatePost from './pages/CreatePost';
+import CreateProduct from './pages/CreateProduct';
+import CreateUser from './pages/CreateUser';
 import Home from './pages/Home';
-import ItemList from './pages/ItemList';
+import PostList from './pages/PostList';
+import ProductList from './pages/ProductList';
+import UserList from './pages/UserList';
 
 const App = () => {
   return (
@@ -12,22 +16,22 @@ const App = () => {
         <Home/>
       </Route>
       <Route path='/products'>
-        <ItemList/>
+        <ProductList/>
       </Route>
       <Route path='/createproduct'>
-        <CreateItem/>
+        <CreateProduct/>
       </Route>
       <Route path='/users'>
-        <ItemList/>
+        <UserList/>
       </Route>
       <Route path='/createuser'>
-        <CreateItem/>
+        <CreateUser/>
       </Route>
       <Route path='/posts'>
-        <ItemList/>
+        <PostList/>
       </Route>
       <Route path='/createpost'>
-        <CreateItem/>
+        <CreatePost/>
       </Route>
     </Router>
   );
