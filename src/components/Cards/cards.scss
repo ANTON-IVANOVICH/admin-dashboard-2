@@ -34,6 +34,7 @@
       line-height: 24px;
       color: #9FA2B4;
       transition: color 0.3s ease-in-out;
+      user-select: none;
     }
 
     &_number {
@@ -42,6 +43,7 @@
       line-height: 50px;
       color: #252733;
       transition: color 0.3s ease-in-out;
+      user-select: none;
     }
   }
 }

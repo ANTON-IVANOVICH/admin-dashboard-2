@@ -3,7 +3,7 @@
     {
       "id": 1,
       "avatar": "https://www.film.ru/sites/default/files/filefield_paths/shutterstock_9669042a.jpg",
-      "author": "Milana",
+      "author": "Arnold",
       "title": "World problems",
       "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum cum magni eveniet error animi? Iure, libero? Cumque iure fuga quae."
     },
@@ -18,15 +18,8 @@
       "id": 3,
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2RHj5aBArvQQQtkpqkJU3MzDrr2ji2rg00w&usqp=CAU",
       "author": "Victor",
-      "title": "My trip",
+      "title": "My adventures",
       "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, est."
-    },
-    {
-      "id": 4,
-      "avatar": "https://www.tampabay.com/resizer/_NX0W08JY9BCxcO8aWSyleJKKNY=/1600x900/smart/cloudfront-us-east-1.images.arcpublishing.com/tbt/SYEHICTK45ADDGJKC36PZRNMT4.jpg",
-      "author": "Tony",
-      "title": "This is my title",
-      "body": "This is my body - content"
     },
     {
       "author": "Peter",
@@ -67,7 +60,7 @@
     },
     {
       "id": 4,
-      "title": "Hummer",
+      "title": "Hummer10",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRng2PqbpSm1DkB05E4jDZvN-gquUTCkGX-Q&usqp=CAU",
       "count": "2",
       "price": "50000"
@@ -76,27 +69,39 @@
   "users": [
     {
       "id": 1,
-      "name": "Alesha",
-      "username": "alehan221",
-      "email": "aleshka92@mail.ru"
+      "avatar_url": "https://www.interfax.ru/ftproot/textphotos/2021/11/10/e700.jpg",
+      "name": "fdsdfgsd",
+      "username": "gggggg",
+      "email": "hi@mail.com",
+      "money": 1000,
+      "registration": "2022-10-09T15:14:55.244Z"
     },
     {
       "id": 2,
-      "name": "Rita",
+      "name": "grisha",
+      "avatar_url": "https://assets.weforum.org/article/image/8yhFmC-8VPS2KKO9cftJ3VxpysCQyfck3Gf0V8OnnJE.jpg",
       "username": "Ritavsedela",
-      "email": "rita123@gmail.com"
+      "email": "rita123@gmail.com",
+      "money": 25000,
+      "registration": "2022-10-20T15:14:55.244Z"
     },
     {
       "id": 3,
-      "name": "max",
+      "name": "artur",
+      "avatar_url": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/welterweight-champion-manny-pacquiao-and-adrien-broner-pose-news-photo-1095105496-1565087611.jpg?crop=0.464xw:0.700xh;0.0144xw,0.0650xh&resize=480:*",
       "username": "maxformax",
-      "email": "max999@yandex.ru"
+      "email": "max999@yandex.ru",
+      "money": 55000,
+      "registration": "2022-11-09T15:14:55.244Z"
     },
     {
       "id": 4,
       "name": "Georgiy",
-      "username": "Geo00000",
-      "email": "geogeogeo@gmail.com"
+      "avatar_url": "https://www.thefamouspeople.com/profiles/images/og-barack-obama-790.jpg",
+      "username": "asd",
+      "email": "geogeogeo@gmail.com",
+      "money": 33333,
+      "registration": "2021-11-21T15:14:55.244Z"
     }
   ]
 }

@@ -10,7 +10,8 @@ const CreateProduct: FC = () => {
 
   const addNewProduct = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    await createProduct({ ...product, id: Math.floor(Math.random() * 1000) } as IProduct)
+    const id = Math.floor(Math.random() * 1000);
+    await createProduct({ ...product, id } as IProduct)
     setProduct({ title: '', image: '', count: '', price: '' } as IProduct)
   }
 

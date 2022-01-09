@@ -8,7 +8,7 @@ export const userAPI = createApi({
   endpoints: (build) => ({
     fetchAllUsers: build.query({
       query: () => '/users',
-      providesTags: ['User'] //мгновенная подгрузка обновленных данных
+      providesTags: result => ['User'] //мгновенная подгрузка обновленных данных
     }),
     createUser: build.mutation<IUser, IUser>({
       query: (user) => ({

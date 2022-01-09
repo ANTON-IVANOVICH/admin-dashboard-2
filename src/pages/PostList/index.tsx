@@ -27,7 +27,7 @@ const PostList: FC = () => {
     <div className="container">
       <Header/>
       <div className='postslist'>
-        <h2>Posts List</h2>
+        <h2>Post List</h2>
         <ul className='postslist__list'>
           {
             posts.map((post: IPost) => (

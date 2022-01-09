@@ -1,4 +1,5 @@
-import { FC } from 'react'
+import React, { FC } from 'react'
+import { Delete } from '@material-ui/icons';
 import { IPost } from '../../models/IPost';
 import './post.scss'
 
@@ -11,65 +12,55 @@ type Props = {
 const Post: FC<Props> = ({post, remove, update}) => {
   const { avatar, author, title, body } = post;
 
-  const handleUpdate = (event: React.MouseEvent<HTMLButtonElement>) => {
-    const author = 'I am updated author'
-    const title = 'I am updated title'
-    const body = 'I am updated body'
-    update({...post, author, title, body})
+  const inputCall = (e: React.MouseEvent) => {
+    const rootElement = e.currentTarget;
+    const input = document.createElement('input');
+    const btn = document.createElement('button');
+
+    btn.classList.add('post__changerBtn');
+    input.classList.add('post__changerInput');
+
+    btn.textContent = 'Править';
+
+    rootElement.innerHTML = '';
+    rootElement.append(input);
+    rootElement.append(btn);
+
+    if (rootElement.classList.contains('author')) {
+      btn.addEventListener('click', () => {
+        const author = input.value;
+        update({...post, author});
+      });
+    };
+
+    if (rootElement.classList.contains('title')) {
+      btn.addEventListener('click', () => {
+        const title = input.value;
+        update({...post, title});
+      });
+    };
+
+    if (rootElement.classList.contains('body')) {
+      btn.addEventListener('click', () => {
+        const body = input.value;
+        update({...post, body});
+      });
+    };
   }
 
-  const handleDelete = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const handleDelete = () => {
     remove(post)
   }
 
   return (
-    <li className='post'>
-      <img src={avatar} alt={author} />
-      <h3>{author}</h3>
-      <h4>{title}</h4>
-      <span>{body}</span>
-      <button className='post__btn delete' onClick={handleDelete}>Delete</button>
-      <button className='post__btn update' onClick={handleUpdate}>Update</button>
+    <li className="post">
+      <img className='post__img img' src={avatar} alt={title} />
+      <h3 className="post__author author" onDoubleClick={e => inputCall(e)}>{author}</h3>
+      <h4 className="post__title title" onDoubleClick={e => inputCall(e)}>{title}</h4>
+      <span className="post__body body" onDoubleClick={e => inputCall(e)}>{body}</span>
+      <button className="post__btn delete" onClick={handleDelete}><Delete/></button>
     </li>
   )
 }
 
 export default Post
-
-// import { FC } from 'react'
-// import { Post } from '../../models/Post'
-// import './postItem.scss';
-
-// type Props = {
-//   post: Post;
-//   remove: (post: Post) => void;
-//   update: (post: Post) => void;
-// }
-
-// const PostItem: FC<Props> = ({post, remove, update}) => {
-//   const { avatar, author, title, body } = post;
-
-//   const handleUpdate = (event: React.MouseEvent<HTMLButtonElement>) => {
-//     const author = 'I am updated author'
-//     const title = 'I am updated title'
-//     const body = 'I am updated body'
-//     update({...post, author, title, body})
-//   }
-
-//   const handleDelete = (event: React.MouseEvent<HTMLButtonElement>) => {
-//     remove(post)
-//   }
-
-//   return (
-//     <li className='postitem'>
-//       <img src={avatar} alt={author} />
-//       <h3>{author}</h3>
-//       <h4>{title}</h4>
-//       <span>{body}</span>
-//       <button className='postitem__btn delete' onClick={handleDelete}>Delete</button>
-//       <button className='postitem__btn update' onClick={handleUpdate}>Update</button>
-//     </li>
-//   )
-// }
-
-// export default PostItem

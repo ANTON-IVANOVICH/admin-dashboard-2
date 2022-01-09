@@ -10,9 +10,10 @@ const CreatePost: FC = () => {
 
   const addNewPost = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    await createPost({ ...post, id: Math.floor(Math.random() * 1000) } as IPost)
-    setPost({ author: '', title: '', body: '', avatar: '' } as IPost)
-  }
+    const id = Math.floor(Math.random() * 1000);
+    await createPost({ ...post, id } as IPost);
+    setPost({ author: '', title: '', body: '', avatar: '' } as IPost);
+  };
 
   if (isLoading) return <h1>Loading...</h1>;
 

@@ -10,8 +10,11 @@ const CreateUser: FC = () => {
 
   const addNewUser = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    createUser({ ...user, id: Math.floor(Math.random() * 1000) } as IUser)
-    setUser({ name: '', username: '', email: '' } as IUser)
+    const id = Math.floor(Math.random() * 1000);
+    const registration = new Date();
+    const money = Math.floor(Math.random() * 100000);
+    createUser({ ...user, id, registration, money } as IUser)
+    setUser({ name: '', avatar_url: '', username: '', email: '' } as IUser)
   }
 
   if (isLoading) return <h1>Loading...</h1>;
@@ -27,6 +30,12 @@ const CreateUser: FC = () => {
           value={user.name}
           onChange={e => setUser({...user, name: e.target.value})}
           placeholder='name'
+        />
+        <input
+          className='createuser__input'
+          value={user.avatar_url}
+          onChange={e => setUser({...user, avatar_url: e.target.value})}
+          placeholder='avatar_url'
         />
         <input
           className='createuser__input'

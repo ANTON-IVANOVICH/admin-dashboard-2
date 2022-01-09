@@ -1,51 +1,46 @@
 .product {
-  padding: 10px;
   display: flex;
   align-items: center;
+  padding: 20px;
+  margin-bottom: 20px;
   border: 1px solid gray;
   border-radius: 10px;
 
-  &:not(:last-child) {
-    margin-bottom: 15px;
-  }
-
-  img {
-    margin-right: 10px;
+  &__img {
+    margin-right: 20px;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
   }
 
-  h3 {
-    margin-right: 30px;
+  &__title {
+    margin-right: 50px;
   }
 
-  h4 {
-    margin-right: 15px;
+  &__count {
+    margin-right: 50px;
   }
 
-  span {
-    margin-right: 20px;
+  &__price {
+    margin-right: auto;
   }
 
   &__btn {
-    padding: 4px 6px;
-    color: white;
-    font-size: 20px;
-    border-radius: 30px;
-    border-width: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
 
-    &.update {
-      background-color: rgb(207, 207, 53);
-    }
+  &__changerInput {
+    margin-right: 10px;
+    border-radius: 10px;
+    border-color: gray;
+  }
 
-    &.delete {
-      background-color: red;
-    }
-
-    &:not(:last-child) {
-      margin-right: 10px;
-    }
+  &__changerBtn {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
   }
 }
