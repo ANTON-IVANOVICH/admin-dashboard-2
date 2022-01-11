@@ -56,11 +56,37 @@ const Product: FC<Props> = ({product, remove, update}) => {
     <li className="product">
       <img className='product__img img' src={image} alt={title} />
       <h3 className="product__title title" onDoubleClick={e => inputCall(e)}>{title}</h3>
-      <h4 className="product__count count" onDoubleClick={e => inputCall(e)}>Count: {count}</h4>
-      <span className="product__price price" onDoubleClick={e => inputCall(e)}>${price}</span>
+      <h4 className="product__count count" onDoubleClick={e => inputCall(e)}>{count}</h4>
+      <span className="product__price price" onDoubleClick={e => inputCall(e)}>{price}</span>
       <button className="product__btn delete" onClick={handleDelete}><Delete/></button>
     </li>
   )
-}
+};
 
-export default Product
+export default Product;
+
+// const [product, setProduct] = useState(productItem);
+// const [isChange, setIsChange] = useState(false);
+
+// const handleUpdate = (e) => {
+//   setIsChange(true)
+// }
+
+// if (isChange) {
+//   return (
+//     <>
+//       <input className='product__changerInput' type="text" />
+//       <button className='product__changerBtn'>Править</button>
+//     </>
+//   )
+// }
+
+// return (
+//     <li className="product">
+//       <img className='product__img img' src={image} alt={title} />
+//       <h3 className="product__title title" onDoubleClick={e => inputCall(e)}>{title}</h3>
+//       <h4 className="product__count count" onDoubleClick={e => inputCall(e)}>{count}</h4>
+//       <span className="product__price price" onDoubleClick={e => inputCall(e)}>{price}</span>
+//       <button className="product__btn delete" onClick={handleDelete}><Delete/></button>
+//     </li>
+//   )

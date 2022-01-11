@@ -39,9 +39,9 @@
   "products": [
     {
       "id": 1,
-      "title": "IPhone 100S",
+      "title": "Iphone100s",
       "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZHVjdHxlbnwwfHwwfHw%3D&w=1000&q=80",
-      "count": "3",
+      "count": "20",
       "price": "100500"
     },
     {
@@ -73,7 +73,8 @@
       "name": "fdsdfgsd",
       "username": "gggggg",
       "email": "hi@mail.com",
-      "money": 1000,
+      "getMoney": 1000,
+      "lostMoney": 500,
       "registration": "2022-10-09T15:14:55.244Z"
     },
     {
@@ -82,7 +83,8 @@
       "avatar_url": "https://assets.weforum.org/article/image/8yhFmC-8VPS2KKO9cftJ3VxpysCQyfck3Gf0V8OnnJE.jpg",
       "username": "Ritavsedela",
       "email": "rita123@gmail.com",
-      "money": 25000,
+      "getMoney": 25000,
+      "lostMoney": 250000,
       "registration": "2022-10-20T15:14:55.244Z"
     },
     {
@@ -91,7 +93,8 @@
       "avatar_url": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/welterweight-champion-manny-pacquiao-and-adrien-broner-pose-news-photo-1095105496-1565087611.jpg?crop=0.464xw:0.700xh;0.0144xw,0.0650xh&resize=480:*",
       "username": "maxformax",
       "email": "max999@yandex.ru",
-      "money": 55000,
+      "getMoney": 55000,
+      "lostMoney": 20000,
       "registration": "2022-11-09T15:14:55.244Z"
     },
     {
@@ -100,7 +103,8 @@
       "avatar_url": "https://www.thefamouspeople.com/profiles/images/og-barack-obama-790.jpg",
       "username": "asd",
       "email": "geogeogeo@gmail.com",
-      "money": 33333,
+      "getMoney": 33333,
+      "lostMoney": 30000,
       "registration": "2021-11-21T15:14:55.244Z"
     }
   ]
