@@ -26,26 +26,18 @@ const Post: FC<Props> = ({post, remove, update}) => {
     rootElement.append(input);
     rootElement.append(btn);
 
-    if (rootElement.classList.contains('author')) {
-      btn.addEventListener('click', () => {
+    btn.addEventListener('click', () => {
+      if (rootElement.classList.contains('author')) {
         const author = input.value;
         update({...post, author});
-      });
-    };
-
-    if (rootElement.classList.contains('title')) {
-      btn.addEventListener('click', () => {
+      } else if (rootElement.classList.contains('title')) {
         const title = input.value;
         update({...post, title});
-      });
-    };
-
-    if (rootElement.classList.contains('body')) {
-      btn.addEventListener('click', () => {
+      } else if (rootElement.classList.contains('body')) {
         const body = input.value;
         update({...post, body});
-      });
-    };
+      };
+    });
   }
 
   const handleDelete = () => {

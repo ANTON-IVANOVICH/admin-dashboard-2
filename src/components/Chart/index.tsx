@@ -15,7 +15,8 @@ const Chart: FC = () => {
           <XAxis dataKey="name" />
           <YAxis />
           <Legend />
-          <Line type="monotone" dataKey="money" stroke="#82ca9d" />
+          <Line type="monotone" dataKey="getMoney" stroke="#00ff62" />
+          <Line type="monotone" dataKey="lostMoney" stroke="#ff0000" />
           <Tooltip />
         </LineChart>
       </ResponsiveContainer>

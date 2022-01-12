@@ -1,8 +1,8 @@
-import { FC } from 'react';
+import React, { FC } from 'react';
 import { AddCircleOutlineOutlined } from '@material-ui/icons'
 import './tasks.scss';
 
-const Tasks: FC = () => {
+const Tasks: FC = React.memo(() => {
   return (
     <div className='tasks'>
       <div className="tasks__top">
@@ -35,6 +35,6 @@ const Tasks: FC = () => {
       </ul>
     </div>
   );
-};
+});
 
 export default Tasks;

@@ -8,12 +8,20 @@ const CreatePost: FC = () => {
   const [post, setPost] = useState({} as IPost);
   const [createPost, { isError, isLoading }] = postAPI.useCreatePostMutation();
 
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setPost({ ...post, [name]: value })
+  }
+
   const addNewPost = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const id = Math.floor(Math.random() * 1000);
-    await createPost({ ...post, id } as IPost);
-    setPost({ author: '', title: '', body: '', avatar: '' } as IPost);
-  };
+    if (post.author && post.title && post.body) {
+      const id = new Date().getTime();
+      await createPost({ ...post, id } as IPost)
+      setPost({ author: '', title: '', body: '', avatar: '' } as IPost)
+    }
+  }
 
   if (isLoading) return <h1>Loading...</h1>;
 
@@ -25,26 +33,26 @@ const CreatePost: FC = () => {
       <form className='createpost' onSubmit={addNewPost}>
         <input
           className='createpost__input'
-          value={post.author}
-          onChange={e => setPost({...post, author: e.target.value})}
+          name='author'
+          onChange={e => handleChange(e)}
           placeholder='author'
         />
         <input
           className='createpost__input'
-          value={post.title}
-          onChange={e => setPost({...post, title: e.target.value})}
+          name='title'
+          onChange={e => handleChange(e)}
           placeholder='title'
         />
         <input
           className='createpost__input'
-          value={post.body}
-          onChange={e => setPost({...post, body: e.target.value})}
+          name='body'
+          onChange={e => handleChange(e)}
           placeholder='body'
         />
         <input
           className='createpost__input'
-          value={post.avatar}
-          onChange={e => setPost({...post, avatar: e.target.value})}
+          name='avatar'
+          onChange={e => handleChange(e)}
           placeholder='avatar url'
         />
         <button className='createpost__btn'>Submit</button>

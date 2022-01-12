@@ -31,7 +31,7 @@ const ProductList: FC = () => {
         <ul className='productslist__list'>
           {
             products.map((product: IProduct) => (
-              <ProductComponent key={product.id} product={product} remove={handleDelete} update={handleUpdate}/>
+              <ProductComponent key={product.id} productItem={product} remove={handleDelete} update={handleUpdate}/>
             ))
           }
         </ul>

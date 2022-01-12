@@ -8,13 +8,22 @@ const CreateUser: FC = () => {
   const [user, setUser] = useState({} as IUser);
   const [createUser, { isError, isLoading }] = userAPI.useCreateUserMutation();
 
-  const addNewUser = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const id = Math.floor(Math.random() * 1000);
-    const registration = new Date();
-    const money = Math.floor(Math.random() * 100000);
-    createUser({ ...user, id, registration, money } as IUser)
-    setUser({ name: '', avatar_url: '', username: '', email: '' } as IUser)
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setUser({ ...user, [name]: value })
+  }
+
+  const addNewUser = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (user.name && user.username && user.email) {
+      const id = new Date().getTime();
+      const registration = new Date();
+      const getMoney = Math.floor(Math.random() * 100000);
+      const lostMoney = Math.floor(Math.random() * 100000);
+      await createUser({ ...user, id, registration, getMoney, lostMoney } as IUser)
+      setUser({ name: '', username: '', email: '', avatar_url: '' } as IUser)
+    }
   }
 
   if (isLoading) return <h1>Loading...</h1>;
@@ -27,26 +36,26 @@ const CreateUser: FC = () => {
       <form className='createuser' onSubmit={addNewUser}>
         <input
           className='createuser__input'
-          value={user.name}
-          onChange={e => setUser({...user, name: e.target.value})}
+          name='name'
+          onChange={e => handleChange(e)}
           placeholder='name'
         />
         <input
           className='createuser__input'
-          value={user.avatar_url}
-          onChange={e => setUser({...user, avatar_url: e.target.value})}
+          name='avatar_url'
+          onChange={e => handleChange(e)}
           placeholder='avatar_url'
         />
         <input
           className='createuser__input'
-          value={user.username}
-          onChange={e => setUser({...user, username: e.target.value})}
+          name='username'
+          onChange={e => handleChange(e)}
           placeholder='username'
         />
         <input
           className='createuser__input'
-          value={user.email}
-          onChange={e => setUser({...user, email: e.target.value})}
+          name='email'
+          onChange={e => handleChange(e)}
           placeholder='email'
         />
         <button className='createuser__btn'>Submit</button>

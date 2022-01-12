@@ -1,7 +1,7 @@
-import { FC } from 'react';
+import React, { FC } from 'react';
 import './tickets.scss';
 
-const Tickets: FC = () => {
+const Tickets: FC = React.memo(() => {
   return (
     <div className='tickets'>
       <div className="tickets__top">
@@ -29,6 +29,6 @@ const Tickets: FC = () => {
       </ul>
     </div>
   );
-};
+});
 
 export default Tickets;

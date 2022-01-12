@@ -4,6 +4,7 @@ export interface IUser {
   name: string;
   username: string;
   email: string;
-  money: number;
+  getMoney: number;
+  lostMoney: number;
   registration: Date;
 }
