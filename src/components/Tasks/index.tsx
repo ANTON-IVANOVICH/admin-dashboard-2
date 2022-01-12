@@ -7,7 +7,7 @@ const Tasks: FC = React.memo(() => {
     <div className='tasks'>
       <div className="tasks__top">
         <h3 className='tasks__top_header'>Tasks</h3>
-        <a href="" className="tasks__top_link">View All</a>
+        <a href="#" className="tasks__top_link">View All</a>
       </div>
       <span className='tasks__date'>Today</span>
       <form className="tasks__form">
