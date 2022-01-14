@@ -1,5 +1,5 @@
-import React, { FC } from 'react'
-import { Delete } from '@material-ui/icons';
+import React, { FC, useEffect, useState } from 'react'
+import { Delete, BorderColorSharp } from '@material-ui/icons';
 import { IUser } from '../../models/IUser';
 import './user.scss'
 
@@ -10,57 +10,52 @@ type Props = {
 }
 
 const User: FC<Props> = ({user, remove, update}) => {
-  const { name, avatar_url, username, email } = user;
+  const [userItem, setUserItem] = useState(user);
 
-  const inputCall = (e: React.MouseEvent) => {
-    const rootElement = e.currentTarget;
-    const input = document.createElement('input');
-    const btn = document.createElement('button');
+  const handleUpdateClick = () => {}
 
-    btn.classList.add('user__changerBtn');
-    input.classList.add('user__changerInput');
-
-    btn.textContent = 'Править';
-
-    rootElement.innerHTML = '';
-    rootElement.append(input);
-    rootElement.append(btn);
-
-    if (rootElement.classList.contains('name')) {
-      btn.addEventListener('click', () => {
-        const name = input.value;
-        update({...user, name});
-      });
-    };
-
-    if (rootElement.classList.contains('username')) {
-      btn.addEventListener('click', () => {
-        const username = input.value;
-        update({...user, username});
-      });
-    };
-
-    if (rootElement.classList.contains('email')) {
-      btn.addEventListener('click', () => {
-        const email = input.value;
-        update({...user, email});
-      });
-    };
-  }
+  const handleUpdate = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const rootEl = e.currentTarget.parentNode;
+    const currentInput = e.currentTarget;
+    console.log(currentInput);
+    console.log(rootEl);
+  };
 
   const handleDelete = () => {
-    remove(user)
-  }
+    remove(userItem);
+  };
+
+  const { avatar_url, name, username, email } = userItem;
 
   return (
     <li className="user">
       <img className='user__img img' src={avatar_url} alt={username} />
-      <h3 className="user__name name" onDoubleClick={e => inputCall(e)}>{name}</h3>
-      <h4 className="user__username username" onDoubleClick={e => inputCall(e)}>{username}</h4>
-      <span className="user__email email" onDoubleClick={e => inputCall(e)}>{email}</span>
+      <h3 className="user__name name items">
+        {name}<button className='user__changerBtn' onClick={handleUpdateClick}><BorderColorSharp/></button>
+      </h3>
+      <h4 className="user__username username items">
+        {username}<button className='user__changerBtn' onClick={handleUpdateClick}><BorderColorSharp/></button>
+      </h4>
+      <span className="user__email email items">
+        {email}<button className='user__changerBtn' onClick={handleUpdateClick}><BorderColorSharp/></button>
+      </span>
       <button className="user__btn delete" onClick={handleDelete}><Delete/></button>
     </li>
-  )
-}
+  );
+};
 
-export default User
+export default User;
+
+{/* <li className="user">
+<img className='user__img img' src={avatar_url} alt={username} />
+<h3 className="user__name name">
+  {isInputCall ? <input onChange={e => handleUpdate(e)}/> : <>{name}<button onClick={() => setIsInputCall(true)}><BorderColorSharp/></button></>}
+</h3>
+<h4 className="user__username username">
+  {isInputCall ? <input onChange={e => handleUpdate(e)}/> : <>{username}<button onClick={() => setIsInputCall(true)}><BorderColorSharp/></button></>}
+</h4>
+<span className="user__email email">
+  {isInputCall ? <input onChange={e => handleUpdate(e)}/> : <>{email}<button onClick={() => setIsInputCall(true)}><BorderColorSharp/></button></>}
+</span>
+<button className="user__btn delete" onClick={handleDelete}><Delete/></button>
+</li> */}

@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import { Delete } from '@material-ui/icons';
 import { IProduct } from '../../models/IProduct';
 import BorderColorSharp from '@material-ui/icons/BorderColorSharp';
@@ -9,8 +9,8 @@ type Props = {
   remove: (product: IProduct) => void;
   update: (product: IProduct) => void;
 }
-//SHITTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
-const Product: FC<Props> = ({productItem, remove, update}) => {
+
+const Product: FC<Props> = ({ productItem, remove, update }) => {
   const [product, setProduct] = useState(productItem);
   const [isChange, setIsChange] = useState(false);
 
@@ -19,19 +19,26 @@ const Product: FC<Props> = ({productItem, remove, update}) => {
     const value = e.target.value;
     setProduct({ ...product, [name]: value });
   };
+  
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    update(product);
+  };
 
   const handleDelete = () => {
-    remove(product)
+    remove(product);
   };
+
+  //type='number' not work
 
   if (isChange) {
     return (
-      <li className='product'>
+      <form className='product' onSubmit={e => handleSubmit(e)}>
         <input className='product__changerInput' placeholder='title' name='title' onChange={e => handleUpdate(e)}/>
         <input className='product__changerInput' placeholder='count' name='count' onChange={e => handleUpdate(e)}/>
         <input className='product__changerInput' placeholder='price' name='price' onChange={e => handleUpdate(e)}/>
-        <button className='product__changerBtn' onClick={() => update(product)}><BorderColorSharp/></button>
-      </li>
+        <button className='product__changerBtn' type='submit'><BorderColorSharp/></button>
+      </form>
     )
   }
   

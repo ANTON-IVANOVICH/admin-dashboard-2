@@ -4,11 +4,11 @@ import { IPost } from '../../models/IPost';
 export const postAPI = createApi({
   reducerPath: 'postAPI',
   baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:5000' }),
-  tagTypes: ['Post'], // мгновенная подгрузка обновленных данных
+  tagTypes: ['Post'], 
   endpoints: (build) => ({
     fetchAllPosts: build.query({
       query: () => '/posts',
-      providesTags: ['Post'] //мгновенная подгрузка обновленных данных
+      providesTags: ['Post']
     }),
     createPost: build.mutation<IPost, IPost>({
       query: (post) => ({
@@ -16,7 +16,7 @@ export const postAPI = createApi({
         method: 'POST',
         body: post
       }),
-      invalidatesTags: ['Post'] // мгновенная подгрузка обновленных данных
+      invalidatesTags: ['Post'] 
     }),
     updatePost: build.mutation<IPost, IPost>({
       query: (post) => ({

@@ -4,11 +4,11 @@ import { IProduct } from '../../models/IProduct';
 export const productAPI = createApi({
   reducerPath: 'productAPI',
   baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:5000' }),
-  tagTypes: ['Product'], // мгновенная подгрузка обновленных данных
+  tagTypes: ['Product'], 
   endpoints: (build) => ({
     fetchAllProducts: build.query({
       query: () => '/products',
-      providesTags: ['Product'] //мгновенная подгрузка обновленных данных
+      providesTags: ['Product'] 
     }),
     createProduct: build.mutation<IProduct, IProduct>({
       query: (product) => ({
@@ -16,7 +16,7 @@ export const productAPI = createApi({
         method: 'POST',
         body: product
       }),
-      invalidatesTags: ['Product'] // мгновенная подгрузка обновленных данных
+      invalidatesTags: ['Product'] 
     }),
     updateProduct: build.mutation<IProduct, IProduct>({
       query: (product) => ({

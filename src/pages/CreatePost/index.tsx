@@ -1,27 +1,27 @@
-import { FC, useState } from 'react'
+import { FC, useRef } from 'react'
 import Header from '../../components/Header';
 import { IPost } from '../../models/IPost';
 import { postAPI } from '../../store/services/PostService';
 import './createPost.scss';
 
 const CreatePost: FC = () => {
-  const [post, setPost] = useState({} as IPost);
   const [createPost, { isError, isLoading }] = postAPI.useCreatePostMutation();
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const name = e.target.name;
-    const value = e.target.value;
-    setPost({ ...post, [name]: value })
-  }
+  const authorRef = useRef<HTMLInputElement>(null);
+  const titleRef = useRef<HTMLInputElement>(null);
+  const bodyRef = useRef<HTMLInputElement>(null);
+  const avatarRef = useRef<HTMLInputElement>(null);
 
   const addNewPost = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (post.author && post.title && post.body) {
+    if (null !== authorRef.current && titleRef.current && bodyRef.current && authorRef.current) {
+      const author = authorRef.current.value;
+      const title = titleRef.current.value;
+      const body = bodyRef.current.value;
+      const avatar = authorRef.current.value;
       const id = new Date().getTime();
-      await createPost({ ...post, id } as IPost)
-      setPost({ author: '', title: '', body: '', avatar: '' } as IPost)
-    }
-  }
+      await createPost({ id, author, title, body, avatar } as IPost);
+    };
+  };
 
   if (isLoading) return <h1>Loading...</h1>;
 
@@ -34,25 +34,25 @@ const CreatePost: FC = () => {
         <input
           className='createpost__input'
           name='author'
-          onChange={e => handleChange(e)}
+          ref={authorRef}
           placeholder='author'
         />
         <input
           className='createpost__input'
           name='title'
-          onChange={e => handleChange(e)}
+          ref={titleRef}
           placeholder='title'
         />
         <input
           className='createpost__input'
           name='body'
-          onChange={e => handleChange(e)}
+          ref={bodyRef}
           placeholder='body'
         />
         <input
           className='createpost__input'
           name='avatar'
-          onChange={e => handleChange(e)}
+          ref={avatarRef}
           placeholder='avatar url'
         />
         <button className='createpost__btn'>Submit</button>

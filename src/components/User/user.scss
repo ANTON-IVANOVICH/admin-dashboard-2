@@ -6,6 +6,11 @@
   border: 1px solid gray;
   border-radius: 10px;
 
+  .items {
+    display: flex;
+    align-items: center;
+  }
+
   &__img {
     margin-right: 20px;
     width: 40px;
