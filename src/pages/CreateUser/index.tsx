@@ -1,5 +1,6 @@
 import { FC, useState } from 'react'
 import Header from '../../components/Header';
+import Sidebar from '../../components/Sidebar';
 import { IUser } from '../../models/IUser';
 import { userAPI } from '../../store/services/UserService';
 import './createUser.scss';
@@ -31,36 +32,39 @@ const CreateUser: FC = () => {
   if (isError) return <h1>Error!!!</h1>;
 
   return (
-    <div className="container">
-      <Header/>
-      <form className='createuser' onSubmit={addNewUser}>
-        <input
-          className='createuser__input'
-          name='name'
-          onChange={e => handleChange(e)}
-          placeholder='name'
-        />
-        <input
-          className='createuser__input'
-          name='avatar_url'
-          onChange={e => handleChange(e)}
-          placeholder='avatar_url'
-        />
-        <input
-          className='createuser__input'
-          name='username'
-          onChange={e => handleChange(e)}
-          placeholder='username'
-        />
-        <input
-          className='createuser__input'
-          name='email'
-          onChange={e => handleChange(e)}
-          placeholder='email'
-        />
-        <button className='createuser__btn'>Submit</button>
-      </form>
-    </div>
+    <>
+      <Sidebar/>
+      <div className="container">
+        <Header/>
+        <form className='createuser' onSubmit={addNewUser}>
+          <input
+            className='createuser__input'
+            name='name'
+            onChange={e => handleChange(e)}
+            placeholder='name'
+          />
+          <input
+            className='createuser__input'
+            name='avatar_url'
+            onChange={e => handleChange(e)}
+            placeholder='avatar_url'
+          />
+          <input
+            className='createuser__input'
+            name='username'
+            onChange={e => handleChange(e)}
+            placeholder='username'
+          />
+          <input
+            className='createuser__input'
+            name='email'
+            onChange={e => handleChange(e)}
+            placeholder='email'
+          />
+          <button className='createuser__btn'>Submit</button>
+        </form>
+      </div>
+    </>
   );
 }
 

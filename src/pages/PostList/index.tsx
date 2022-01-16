@@ -2,6 +2,7 @@ import { Button } from '@material-ui/core';
 import { FC } from 'react'
 import Header from '../../components/Header';
 import PostComponent from '../../components/Post';
+import Sidebar from '../../components/Sidebar';
 import { IPost } from '../../models/IPost';
 import { postAPI } from '../../store/services/PostService';
 import './postList.scss'
@@ -24,20 +25,23 @@ const PostList: FC = () => {
   if (isError) return <h2>Error!!!</h2>;
 
   return (
-    <div className="container">
-      <Header/>
-      <div className='postslist'>
-        <h2>Post List</h2>
-        <ul className='postslist__list'>
-          {
-            posts.map((post: IPost) => (
-              <PostComponent key={post.id} post={post} remove={handleDelete} update={handleUpdate}/>
-            ))
-          }
-        </ul>
-        <Button onClick={refetch} variant="contained">Refetch data</Button>
+    <>
+      <Sidebar/>
+      <div className="container">
+        <Header/>
+        <div className='postslist'>
+          <h2>Post List</h2>
+          <ul className='postslist__list'>
+            {
+              posts.map((post: IPost) => (
+                <PostComponent key={post.id} post={post} remove={handleDelete} update={handleUpdate}/>
+              ))
+            }
+          </ul>
+          <Button onClick={refetch} variant="contained">Refetch data</Button>
+        </div>
       </div>
-    </div>
+    </>
   )
 }
 

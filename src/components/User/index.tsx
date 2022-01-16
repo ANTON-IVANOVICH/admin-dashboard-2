@@ -31,13 +31,16 @@ const User: FC<Props> = ({user, remove, update}) => {
     <li className="user">
       <img className='user__img img' src={avatar_url} alt={username} />
       <h3 className="user__name name items">
-        {name}<button className='user__changerBtn' onClick={handleUpdateClick}><BorderColorSharp/></button>
+        {name}
+        <button className='user__changerBtn' onClick={handleUpdateClick}><BorderColorSharp/></button>
       </h3>
       <h4 className="user__username username items">
-        {username}<button className='user__changerBtn' onClick={handleUpdateClick}><BorderColorSharp/></button>
+        {username}
+        <button className='user__changerBtn' onClick={handleUpdateClick}><BorderColorSharp/></button>
       </h4>
       <span className="user__email email items">
-        {email}<button className='user__changerBtn' onClick={handleUpdateClick}><BorderColorSharp/></button>
+        {email}
+        <button className='user__changerBtn' onClick={handleUpdateClick}><BorderColorSharp/></button>
       </span>
       <button className="user__btn delete" onClick={handleDelete}><Delete/></button>
     </li>

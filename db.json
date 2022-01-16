@@ -100,5 +100,15 @@
       "lostMoney": 30000,
       "registration": "2021-11-21T15:14:55.244Z"
     }
+  ],
+  "authUsers": [
+    {
+      "username": "admin",
+      "password": "admin"
+    },
+    {
+      "username": "123",
+      "password": "123"
+    }
   ]
 }

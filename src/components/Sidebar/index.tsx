@@ -19,7 +19,7 @@ const Sidebar: FC = () => {
         </li>
         <li className="sidebar__list_item">
           <ConfirmationNumberOutlined/>
-          <Link to='/createproduct' className="sidebar__list_link">Create Product</Link>
+          <Link to='/create-product' className="sidebar__list_link">Create Product</Link>
         </li>
         <li className="sidebar__list_item">
           <PeopleAltOutlined/>
@@ -27,7 +27,7 @@ const Sidebar: FC = () => {
         </li>
         <li className="sidebar__list_item">
           <AccountCircleOutlined/>
-          <Link to='/createuser' className="sidebar__list_link">Create User</Link>
+          <Link to='/create-user' className="sidebar__list_link">Create User</Link>
         </li>
         <li className="sidebar__list_item">
           <LoyaltyOutlined/>
@@ -35,7 +35,7 @@ const Sidebar: FC = () => {
         </li>
         <li className="sidebar__list_item">
           <AssignmentOutlined/>
-          <Link to='/createpost' className="sidebar__list_link">Create Post</Link>
+          <Link to='/create-post' className="sidebar__list_link">Create Post</Link>
         </li>
         <li className="sidebar__list_item">
           <SettingsOutlined/>

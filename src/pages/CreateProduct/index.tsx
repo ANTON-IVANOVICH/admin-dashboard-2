@@ -1,5 +1,6 @@
 import React, { FC, useState } from 'react'
 import Header from '../../components/Header';
+import Sidebar from '../../components/Sidebar';
 import { IProduct } from '../../models/IProduct';
 import { productAPI } from '../../store/services/ProductService';
 import './createProduct.scss';
@@ -28,36 +29,39 @@ const CreateProduct: FC = () => {
   if (isError) return <h1>Error!!!</h1>;
 
   return (
-    <div className="container">
-      <Header/>
-      <form className='createproduct' onSubmit={addNewProduct}>
-        <input
-          className='createproduct__input'
-          name='title'
-          onChange={e => handleChange(e)}
-          placeholder='title'
-        />
-        <input
-          className='createproduct__input'
-          name='image'
-          onChange={e => handleChange(e)}
-          placeholder='image'
-        />
-        <input
-          className='createproduct__input'
-          name='count'
-          onChange={e => handleChange(e)}
-          placeholder='count'
-        />
-        <input
-          className='createproduct__input'
-          name='price'
-          onChange={e => handleChange(e)}
-          placeholder='price'
-        />
-        <button className='createproduct__btn'>Submit</button>
-      </form>
-    </div>
+    <>
+      <Sidebar/>
+      <div className="container">
+        <Header/>
+        <form className='createproduct' onSubmit={addNewProduct}>
+          <input
+            className='createproduct__input'
+            name='title'
+            onChange={e => handleChange(e)}
+            placeholder='title'
+          />
+          <input
+            className='createproduct__input'
+            name='image'
+            onChange={e => handleChange(e)}
+            placeholder='image'
+          />
+          <input
+            className='createproduct__input'
+            name='count'
+            onChange={e => handleChange(e)}
+            placeholder='count'
+          />
+          <input
+            className='createproduct__input'
+            name='price'
+            onChange={e => handleChange(e)}
+            placeholder='price'
+          />
+          <button className='createproduct__btn'>Submit</button>
+        </form>
+      </div>
+    </>
   );
 }
 

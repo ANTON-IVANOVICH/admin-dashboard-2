@@ -1,5 +1,6 @@
 import { FC, useRef } from 'react'
 import Header from '../../components/Header';
+import Sidebar from '../../components/Sidebar';
 import { IPost } from '../../models/IPost';
 import { postAPI } from '../../store/services/PostService';
 import './createPost.scss';
@@ -28,36 +29,39 @@ const CreatePost: FC = () => {
   if (isError) return <h1>Error!!!</h1>;
 
   return (
-    <div className="container">
-      <Header/>
-      <form className='createpost' onSubmit={addNewPost}>
-        <input
-          className='createpost__input'
-          name='author'
-          ref={authorRef}
-          placeholder='author'
-        />
-        <input
-          className='createpost__input'
-          name='title'
-          ref={titleRef}
-          placeholder='title'
-        />
-        <input
-          className='createpost__input'
-          name='body'
-          ref={bodyRef}
-          placeholder='body'
-        />
-        <input
-          className='createpost__input'
-          name='avatar'
-          ref={avatarRef}
-          placeholder='avatar url'
-        />
-        <button className='createpost__btn'>Submit</button>
-      </form>
-    </div>
+    <>
+      <Sidebar/>
+      <div className="container">
+        <Header/>
+        <form className='createpost' onSubmit={addNewPost}>
+          <input
+            className='createpost__input'
+            name='author'
+            ref={authorRef}
+            placeholder='author'
+          />
+          <input
+            className='createpost__input'
+            name='title'
+            ref={titleRef}
+            placeholder='title'
+          />
+          <input
+            className='createpost__input'
+            name='body'
+            ref={bodyRef}
+            placeholder='body'
+          />
+          <input
+            className='createpost__input'
+            name='avatar'
+            ref={avatarRef}
+            placeholder='avatar url'
+          />
+          <button className='createpost__btn'>Submit</button>
+        </form>
+      </div>
+    </>
   );
 }
 

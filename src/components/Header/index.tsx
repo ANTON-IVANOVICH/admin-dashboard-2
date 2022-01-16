@@ -1,13 +1,20 @@
 import { FC } from 'react';
 import { Notifications, Search } from '@material-ui/icons'
 import './header.scss';
-import { useLocation } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
+import { RouteNames } from '../../router';
+import { useActions, useAppDispatch, useAppSelector } from '../../hooks/redux';
+import { AuthActionCreators } from '../../store/reducers/auth/actionCreators';
 
 const Header: FC = () => {
-  const { pathname } = useLocation();
+  // const { pathname } = useLocation();
+  const router = useHistory();
+  const { isAuth, user } = useAppSelector(state => state.authReducer);
+  const {logout} = useActions();
+  console.log(router);
   let title = 'Overview';
 
-  switch (pathname) {
+  switch (router.location.pathname) {
     case '/products':
       title = 'Products';
       break;
@@ -37,12 +44,14 @@ const Header: FC = () => {
       <div className="header__right">
         <Search/>
         <Notifications/>
-        <span className="header__right_username">Jones Ferdinand</span>
-        <img 
-          className='header__right_user_avatar' 
-          src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80" 
-          alt="user avatar" 
+        <span className="header__right_username">{user.username}</span>
+        <img
+          className='header__right_user_avatar'
+          src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
+          alt="user avatar"
         />
+        <button onClick={logout}>Выйти</button>
+        {/* <button onClick={() => router.push(RouteNames.LOGIN)}>Выйти</button> */}
       </div>
     </div>
   );

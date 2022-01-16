@@ -8,3 +8,8 @@ export interface IUser {
   lostMoney: number;
   registration: Date;
 }
+
+export interface IAuthUser {
+  username: string;
+  password: string;
+}
