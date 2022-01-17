@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react'
+import React, { FC, useState } from 'react'
 import { Delete } from '@material-ui/icons';
 import { IProduct } from '../../models/IProduct';
 import BorderColorSharp from '@material-ui/icons/BorderColorSharp';
@@ -23,6 +23,7 @@ const Product: FC<Props> = ({ productItem, remove, update }) => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     update(product);
+    setIsChange(false);
   };
 
   const handleDelete = () => {

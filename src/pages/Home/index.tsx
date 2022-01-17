@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import Cards from '../../components/Cards';
 import Chart from '../../components/Chart';
 import Header from '../../components/Header';
@@ -8,13 +8,15 @@ import Tickets from '../../components/Tickets';
 import './home.scss';
 
 const Home: FC = () => {
+  const [dataName, setDataName] = useState('users');
+
   return (
     <>
       <Sidebar/>
       <div className='container'>
         <Header/>
-        <Cards/>
-        <Chart/>
+        <Cards setDataName={setDataName}/>
+        <Chart dataName={dataName} />
         <div className="info_container">
           <Tickets/>
           <Tasks/>

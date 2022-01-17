@@ -47,3 +47,12 @@
     }
   }
 }
+
+.active {
+  border-color: #3751FF;
+
+  & .cards__articles_header,
+  & .cards__articles_number {
+    color: #3751FF;
+  }
+}

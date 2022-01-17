@@ -19,8 +19,9 @@ const CreatePost: FC = () => {
       const title = titleRef.current.value;
       const body = bodyRef.current.value;
       const avatar = authorRef.current.value;
+      const views = Math.floor(Math.random() * 5000);
       const id = new Date().getTime();
-      await createPost({ id, author, title, body, avatar } as IPost);
+      await createPost({ id, author, title, body, avatar, views } as IPost);
     };
   };
 

@@ -1,46 +1,24 @@
-import { FC } from 'react';
+import { FC, useEffect, useState } from 'react';
+import { useHistory, useLocation } from 'react-router-dom';
+import { useActions, useAppSelector } from '../../hooks/redux';
 import { Notifications, Search } from '@material-ui/icons'
 import './header.scss';
-import { useHistory, useLocation } from 'react-router-dom';
-import { RouteNames } from '../../router';
-import { useActions, useAppDispatch, useAppSelector } from '../../hooks/redux';
-import { AuthActionCreators } from '../../store/reducers/auth/actionCreators';
 
 const Header: FC = () => {
-  // const { pathname } = useLocation();
+  const [title, setTitle] = useState('Overview');
+  const { pathname } = useLocation();
   const router = useHistory();
-  const { isAuth, user } = useAppSelector(state => state.authReducer);
-  const {logout} = useActions();
-  console.log(router);
-  let title = 'Overview';
+  const { user } = useAppSelector(state => state.authReducer);
+  const { logout } = useActions();
 
-  switch (router.location.pathname) {
-    case '/products':
-      title = 'Products';
-      break;
-    case '/createproduct':
-      title = 'Create Product';
-      break;
-    case '/posts':
-      title = 'Posts';
-      break;
-    case '/createpost':
-      title = 'Create Post';
-      break;
-    case '/users':
-      title = 'Users';
-      break;
-    case '/createuser':
-      title = 'Create User';
-      break;
-    default:
-      title = 'Overview';
-      break;
-  }
+  useEffect(() => {
+    let title = pathname.replace('/', '').replace('-', ' ');
+    setTitle(title);
+  }, [pathname])
 
   return (
     <div className='header'>
-      <h2>{title}</h2>
+      <h2 className='header__title'>{title || 'Overview'}</h2>
       <div className="header__right">
         <Search/>
         <Notifications/>
@@ -50,8 +28,7 @@ const Header: FC = () => {
           src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
           alt="user avatar"
         />
-        <button onClick={logout}>Выйти</button>
-        {/* <button onClick={() => router.push(RouteNames.LOGIN)}>Выйти</button> */}
+        <button className='header__right_btn' onClick={logout}>Выйти</button>
       </div>
     </div>
   );
