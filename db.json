@@ -99,7 +99,7 @@
       "id": 4,
       "name": "Georgiy",
       "avatar_url": "https://www.thefamouspeople.com/profiles/images/og-barack-obama-790.jpg",
-      "username": "asd",
+      "username": "username",
       "email": "geogeogeo@gmail.com",
       "getMoney": 33333,
       "lostMoney": 30000,
@@ -109,11 +109,13 @@
   "authUsers": [
     {
       "username": "admin",
-      "password": "admin"
+      "password": "admin",
+      "avatar": "https://thumbs.dreamstime.com/z/three-persons-admin-icon-outline-style-vector-web-design-isolated-white-background-179719844.jpg"
     },
     {
       "username": "123",
-      "password": "123"
+      "password": "123",
+      "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
     }
   ]
 }

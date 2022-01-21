@@ -17,18 +17,19 @@ const Cards: FC<Props> = ({ setDataName }) => {
   const { data: productData  } = productAPI.useFetchAllProductsQuery('');
 
   const toggleActiveClass = (e: React.MouseEvent) => {
-    //@ts-ignore
-    setDataName(e.currentTarget.firstChild?.textContent?.toLowerCase());
-    document.querySelectorAll('.cards__articles').forEach(article => article.classList.remove('active'));
-    e.currentTarget.classList.add('active');
+      if (e.currentTarget.firstChild?.textContent) {
+      setDataName(e.currentTarget.firstChild.textContent.toLowerCase());
+      document.querySelectorAll('.cards__articles').forEach(article => article.classList.remove('active'));
+      e.currentTarget.classList.add('active');
+    };
   };
 
   useEffect(() => {
     if (postData && userData && productData) {
-      setPostCount(postData.length)
-      setUserCount(userData.length)
-      setProductCount(productData.length)
-    }
+      setPostCount(postData.length);
+      setUserCount(userData.length);
+      setProductCount(productData.length);
+    };
   }, [postData, userData, productData]);
 
   return (
@@ -50,7 +51,7 @@ const Cards: FC<Props> = ({ setDataName }) => {
         <span className="cards__articles_number">64</span>
       </article>
     </div>
-  )
-}
+  );
+};
 
-export default Cards
+export default Cards;

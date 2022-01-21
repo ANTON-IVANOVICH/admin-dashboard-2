@@ -25,7 +25,7 @@ const Header: FC = () => {
         <span className="header__right_username">{user.username}</span>
         <img
           className='header__right_user_avatar'
-          src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
+          src={user.avatar}
           alt="user avatar"
         />
         <button className='header__right_btn' onClick={logout}>Выйти</button>
