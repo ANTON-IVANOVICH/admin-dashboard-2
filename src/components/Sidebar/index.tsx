@@ -39,7 +39,7 @@ const Sidebar: FC = () => {
         </li>
         <li className="sidebar__list_item">
           <SettingsOutlined/>
-          <a className="sidebar__list_link">Settings</a>
+          <Link to='/todos' className="sidebar__list_link">Todos</Link>
         </li>
       </ul>
     </div>

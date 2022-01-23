@@ -1,8 +1,6 @@
 import { Button } from '@material-ui/core';
 import { FC } from 'react'
-import Header from '../../components/Header';
 import PostComponent from '../../components/Post';
-import Sidebar from '../../components/Sidebar';
 import { IPost } from '../../models/IPost';
 import { postAPI } from '../../store/services/PostService';
 import './postList.scss'
@@ -13,39 +11,33 @@ const PostList: FC = () => {
   const [updatePost] = postAPI.useUpdatePostMutation();
 
   const handleUpdate = (post: IPost) => {
-    updatePost(post)
-  }
+    updatePost(post);
+  };
 
   const handleDelete = (post: IPost) => {
-    deletePost(post)
-  }
+    deletePost(post);
+  };
 
   if (isLoading) return <h2>Loading...</h2>;
 
   if (isError) return <h2>Error!!!</h2>;
 
   return (
-    <>
-      <Sidebar/>
-      <div className="container">
-        <Header/>
-        <div className='postslist'>
-          <h2>Post List</h2>
-          <ul className='postslist__list'>
-            {
-              posts.map((post: IPost) => (
-                <PostComponent key={post.id} post={post} remove={handleDelete} update={handleUpdate}/>
-              ))
-            }
-          </ul>
-          <Button onClick={refetch} variant="contained">Refetch data</Button>
-        </div>
-      </div>
-    </>
-  )
-}
+    <div className='postslist'>
+      <h2>Post List</h2>
+      <ul className='postslist__list'>
+        {
+          posts.map((post: IPost) => (
+            <PostComponent key={post.id} post={post} remove={handleDelete} update={handleUpdate}/>
+          ))
+        }
+      </ul>
+      <Button onClick={refetch} variant="contained">Refetch data</Button>
+    </div>
+  );
+};
 
-export default PostList
+export default PostList;
 
 // import { FC } from 'react';
 // import PostItem from '../PostItem';

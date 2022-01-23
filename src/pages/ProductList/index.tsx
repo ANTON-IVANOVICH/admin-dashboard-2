@@ -1,11 +1,9 @@
-import { Button } from '@material-ui/core'
-import { FC } from 'react'
-import Header from '../../components/Header'
-import ProductComponent from '../../components/Product'
-import Sidebar from '../../components/Sidebar'
-import { IProduct } from '../../models/IProduct'
-import { productAPI } from '../../store/services/ProductService'
-import './productList.scss'
+import { FC } from 'react';
+import ProductComponent from '../../components/Product';
+import { IProduct } from '../../models/IProduct';
+import { productAPI } from '../../store/services/ProductService';
+import { Button } from '@material-ui/core';
+import './productList.scss';
 
 const ProductList: FC = () => {
   const { data: products, isError, isLoading, refetch } = productAPI.useFetchAllProductsQuery('');
@@ -13,39 +11,33 @@ const ProductList: FC = () => {
   const [updateProduct] = productAPI.useUpdateProductMutation();
 
   const handleUpdate = (product: IProduct) => {
-    updateProduct(product)
-  }
+    updateProduct(product);
+  };
 
   const handleDelete = (product: IProduct) => {
-    deleteProduct(product)
-  }
+    deleteProduct(product);
+  };
 
-  if (isLoading) return <h2>Loading...</h2>; // render problem
+  if (isLoading) return <h2>Loading...</h2>;
 
-  if (isError) return <h2>Error!!!</h2>; // render problem
+  if (isError) return <h2>Error!!!</h2>;
 
   return (
-    <>
-      <Sidebar/>
-      <div className="container">
-        <Header/>
-        <div className='productslist'>
-          <h2>Product List</h2>
-          <ul className='productslist__list'>
-            {
-              products.map((product: IProduct) => (
-                <ProductComponent key={product.id} productItem={product} remove={handleDelete} update={handleUpdate}/>
-              ))
-            }
-          </ul>
-          <Button onClick={refetch} variant="contained">Refetch data</Button>
-        </div>
-      </div>
-    </>
-  )
-}
+    <div className='productslist'>
+      <h2>Product List</h2>
+      <ul className='productslist__list'>
+        {
+          products.map((product: IProduct) => (
+            <ProductComponent key={product.id} productItem={product} remove={handleDelete} update={handleUpdate}/>
+          ))
+        }
+      </ul>
+      <Button onClick={refetch} variant="contained">Refetch data</Button>
+    </div>
+  );
+};
 
-export default ProductList
+export default ProductList;
 
 // import { FC } from 'react';
 // import PostItem from '../PostItem';

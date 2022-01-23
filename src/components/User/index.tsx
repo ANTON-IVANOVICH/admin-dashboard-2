@@ -7,7 +7,7 @@ type Props = {
   user: IUser;
   remove: (user: IUser) => void;
   update: (user: IUser) => void;
-}
+};
 
 const User: FC<Props> = ({user, remove, update}) => {
   const [userObj, setUserObj] = useState(user);
@@ -17,7 +17,7 @@ const User: FC<Props> = ({user, remove, update}) => {
   const [isUpdateEmail, setIsUpdateEmail] = useState(false);
 
   const handleUpdateClick = (ceilName: string) => {
-    if (commonFlag === false) {
+    if (!commonFlag) {
       setCommonFlag(true);
       if (ceilName === 'name') setIsUpdateName(!isUpdateName);
       if (ceilName === 'username') setIsUpdateUsername(!isUpdateUsername);
@@ -30,7 +30,7 @@ const User: FC<Props> = ({user, remove, update}) => {
       setIsUpdateEmail(false);
     };
   };
-  
+
   const handleDelete = () => {
     remove(user);
   };
@@ -40,25 +40,27 @@ const User: FC<Props> = ({user, remove, update}) => {
       <img className='user__img img' src={user.avatar_url} alt={user.username} />
       <h3 className="user__name name items">
         {
-          isUpdateName ? 
+          isUpdateName ?
           <input placeholder='name' className='user__changerInput' name='name' onChange={e => setUserObj({ ...userObj, [e.target.name]: e.target.value })} />
-          : user.name
+          :
+          user.name
         }
         <button className='user__changerBtn' onClick={() => handleUpdateClick('name')}><BorderColorSharp/></button>
       </h3>
       <h4 className="user__username username items">
         {
-          isUpdateUsername ? 
+          isUpdateUsername ?
           <input placeholder='username' className='user__changerInput' name='username' onChange={e => setUserObj({ ...userObj, [e.target.name]: e.target.value })} />
-          : user.username
+          :
+          user.username
         }
         <button className='user__changerBtn' onClick={() => handleUpdateClick('username')}><BorderColorSharp/></button>
       </h4>
       <span className="user__email email items">
         {
-          isUpdateEmail ? 
+          isUpdateEmail ?
           <input placeholder='email' className='user__changerInput' name='email' onChange={e => setUserObj({ ...userObj, [e.target.name]: e.target.value })} />
-          : 
+          :
           user.email
         }
         <button className='user__changerBtn' onClick={() => handleUpdateClick('email')}><BorderColorSharp/></button>

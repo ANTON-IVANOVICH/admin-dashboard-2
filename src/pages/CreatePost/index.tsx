@@ -1,27 +1,24 @@
-import { FC, useRef } from 'react'
-import Header from '../../components/Header';
-import Sidebar from '../../components/Sidebar';
+import { FC, useState } from 'react'
 import { IPost } from '../../models/IPost';
 import { postAPI } from '../../store/services/PostService';
 import './createPost.scss';
 
 const CreatePost: FC = () => {
+  const [post, setPost] = useState({} as IPost);
   const [createPost, { isError, isLoading }] = postAPI.useCreatePostMutation();
-  const authorRef = useRef<HTMLInputElement>(null);
-  const titleRef = useRef<HTMLInputElement>(null);
-  const bodyRef = useRef<HTMLInputElement>(null);
-  const avatarRef = useRef<HTMLInputElement>(null);
 
-  const addNewPost = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    setPost({ ...post, [name]: value });
+  };
+
+  const addNewPost = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (null !== authorRef.current && titleRef.current && bodyRef.current && authorRef.current) {
-      const author = authorRef.current.value;
-      const title = titleRef.current.value;
-      const body = bodyRef.current.value;
-      const avatar = authorRef.current.value;
-      const views = Math.floor(Math.random() * 5000);
+    if (post.title && post.author && post.body) {
       const id = new Date().getTime();
-      await createPost({ id, author, title, body, avatar, views } as IPost);
+      createPost({ ...post, id });
+      setPost({ title: '', author: '', body: '', avatar: '' } as IPost);
     };
   };
 
@@ -30,40 +27,34 @@ const CreatePost: FC = () => {
   if (isError) return <h1>Error!!!</h1>;
 
   return (
-    <>
-      <Sidebar/>
-      <div className="container">
-        <Header/>
-        <form className='createpost' onSubmit={addNewPost}>
-          <input
-            className='createpost__input'
-            name='author'
-            ref={authorRef}
-            placeholder='author'
-          />
-          <input
-            className='createpost__input'
-            name='title'
-            ref={titleRef}
-            placeholder='title'
-          />
-          <input
-            className='createpost__input'
-            name='body'
-            ref={bodyRef}
-            placeholder='body'
-          />
-          <input
-            className='createpost__input'
-            name='avatar'
-            ref={avatarRef}
-            placeholder='avatar url'
-          />
-          <button className='createpost__btn'>Submit</button>
-        </form>
-      </div>
-    </>
+    <form className='createpost' onSubmit={addNewPost}>
+      <input
+        className='createpost__input'
+        name='author'
+        onChange={e => handleChange(e)}
+        placeholder='author'
+      />
+      <input
+        className='createpost__input'
+        name='title'
+        onChange={e => handleChange(e)}
+        placeholder='title'
+      />
+      <input
+        className='createpost__input'
+        name='body'
+        onChange={e => handleChange(e)}
+        placeholder='body'
+      />
+      <input
+        className='createpost__input'
+        name='avatar'
+        onChange={e => handleChange(e)}
+        placeholder='avatar url'
+      />
+      <button className='createpost__btn' type='submit'>Submit</button>
+    </form>
   );
-}
+};
 
-export default CreatePost
+export default CreatePost;

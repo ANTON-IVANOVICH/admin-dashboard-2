@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { FC, useState } from 'react';
 import { useActions, useAppSelector } from '../../hooks/redux';
 import LoadingButton from '@mui/lab/LoadingButton';
 import { Box, TextField, FormControl, IconButton, InputAdornment, InputLabel, OutlinedInput } from '@mui/material';
@@ -12,7 +12,9 @@ interface State {
   showPassword: boolean;
 }
 
-const Login = () => {
+//99c714f784e98053cb9ccfe735d0cbc017368d22cf283efca42a94629fbc01ea
+
+const Login: FC = () => {
   const { error, isLoading } = useAppSelector(state => state.authReducer);
   const [values, setValues] = useState<State>({ username: '', password: '', showPassword: false });
   const {login} = useActions();

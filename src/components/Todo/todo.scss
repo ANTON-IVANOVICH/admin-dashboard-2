@@ -4,7 +4,7 @@
   align-items: center;
 }
 
-.post {
+.todo {
   display: flex;
   align-items: center;
   padding: 20px;
@@ -22,17 +22,14 @@
 
   &__author {
     margin-right: 50px;
-    cursor: pointer;
   }
 
   &__title {
     margin-right: 50px;
-    cursor: pointer;
   }
 
   &__body {
     margin-right: auto;
-    cursor: pointer;
   }
 
   &__btn {
