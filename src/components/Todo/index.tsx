@@ -1,22 +1,86 @@
+import { FC, useState } from 'react';
 import { Delete } from '@material-ui/icons';
-import { FC } from 'react';
+import { BorderColorSharp } from '@mui/icons-material';
 import { ITodo } from '../../models/ITodo';
 import './todo.scss';
 
 type Props = {
   todo: ITodo;
-  // remove: (post: IPost) => void;
-  // update: (post: IPost) => void;
+  remove: (todo: ITodo) => void;
+  update: (todo: ITodo) => void;
 };
 
-const Todo: FC<Props> = ({ todo }) => {
+const Todo: FC<Props> = ({ todo, remove, update }) => {
+  const [todoObj, setTodoObj] = useState(todo);
+  const [commonFlag, setCommonFlag] = useState(false);
+  const [isUpdateUserID, setIsUpdateUserID] = useState(false);
+  const [isUpdateTitle, setIsUpdateTitle] = useState(false);
+  const [isUpdateStatus, setIsUpdateStatus] = useState(false);
+
+  const handleUpdateClick = (ceilName: string) => {
+    if (commonFlag === false) {
+      setCommonFlag(true);
+      if (ceilName === 'userID') setIsUpdateUserID(!isUpdateUserID);
+      if (ceilName === 'title') setIsUpdateTitle(!isUpdateTitle);
+      if (ceilName === 'status') setIsUpdateStatus(!isUpdateStatus);
+    } else {
+      update(todoObj);
+      setCommonFlag(false);
+      setIsUpdateUserID(false);
+      setIsUpdateTitle(false);
+      setIsUpdateStatus(false);
+    };
+  };
+
+  const handleDelete = () => {
+    remove(todo);
+  };
 
   return (
     <li className="todo">
-      <h3 className="todo__author author items">{todo.user_id}</h3>
-      <h4 className="todo__title title items">{todo.title}</h4>
-      <span className="todo__body body items">{todo.status}</span>
-      <button className="todo__btn delete"><Delete/></button>
+      <h3 className="todo__userID userID items">
+        {
+          isUpdateUserID ?
+            <input
+              placeholder='userID'
+              className='todo__changerInput'
+              name='userID'
+              onChange={e => setTodoObj({ ...todoObj, [e.target.name]: e.target.value })}
+            />
+          :
+            todo.user_id
+        }
+        <button className='todo__changerBtn' onClick={() => handleUpdateClick('userID')}><BorderColorSharp/></button>
+      </h3>
+      <h4 className="todo__title title items">
+        {
+          isUpdateTitle ?
+            <input
+              placeholder='title'
+              className='todo__changerInput'
+              name='title'
+              onChange={e => setTodoObj({ ...todoObj, [e.target.name]: e.target.value })}
+            />
+          :
+            todo.title
+        }
+        <button className='todo__changerBtn' onClick={() => handleUpdateClick('title')}><BorderColorSharp/></button>
+      </h4>
+      <span className="todo__status status items">
+        {
+          isUpdateStatus ?
+            <input
+              placeholder='status'
+              className='todo__changerInput'
+              name='status'
+              onChange={e => setTodoObj({ ...todoObj, [e.target.name]: e.target.value })}
+            />
+          :
+            todo.status
+        }
+        <button className='todo__changerBtn' onClick={() => handleUpdateClick('status')}><BorderColorSharp/></button>
+      </span>
+      <button className="todo__btn delete" onClick={handleDelete}><Delete/></button>
     </li>
   );
 };
@@ -41,24 +105,24 @@ export default Todo;
   // const [isUpdateTitle, setIsUpdateTitle] = useState(false);
   // const [isUpdateBody, setIsUpdateBody] = useState(false);
 
-//   const handleUpdateClick = (ceilName: string) => {
-//     if (commonFlag === false) {
-//       setCommonFlag(true);
-//       if (ceilName === 'author') setIsUpdateAuthor(!isUpdateAuthor);
-//       if (ceilName === 'title') setIsUpdateTitle(!isUpdateTitle);
-//       if (ceilName === 'body') setIsUpdateBody(!isUpdateBody);
-//     } else {
-//       update(postObj);
-//       setCommonFlag(false);
-//       setIsUpdateAuthor(false);
-//       setIsUpdateTitle(false);
-//       setIsUpdateBody(false);
-//     };
-//   };
+  // const handleUpdateClick = (ceilName: string) => {
+  //   if (commonFlag === false) {
+  //     setCommonFlag(true);
+  //     if (ceilName === 'author') setIsUpdateAuthor(!isUpdateAuthor);
+  //     if (ceilName === 'title') setIsUpdateTitle(!isUpdateTitle);
+  //     if (ceilName === 'body') setIsUpdateBody(!isUpdateBody);
+  //   } else {
+  //     update(postObj);
+  //     setCommonFlag(false);
+  //     setIsUpdateAuthor(false);
+  //     setIsUpdateTitle(false);
+  //     setIsUpdateBody(false);
+  //   };
+  // };
 
-//   const handleDelete = () => {
-//     remove(post);
-//   };
+  // const handleDelete = () => {
+  //   remove(post);
+  // };
 
 //   return (
     // <li className="post">

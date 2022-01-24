@@ -6,20 +6,31 @@ import { Button } from '@material-ui/core';
 import './todos.scss';
 
 const Todos: FC = () => {
-  const { data: todos, isError, isLoading, refetch } = todoAPI.useFetchAllTodosQuery(5);
+  const { data, isError, isLoading, refetch } = todoAPI.useFetchAllTodosQuery('');
+  const [deleteTodo] = todoAPI.useDeleteTodoMutation();
+  const [updateTodo] = todoAPI.useUpdateTodoMutation();
+
+  const handleUpdate = (todo: ITodo) => {
+    updateTodo(todo);
+  };
+
+  const handleDelete = (todo: ITodo) => {
+    deleteTodo(todo);
+  };
 
   if (isLoading) return <h2>Loading...</h2>;
 
   if (isError) return <h2>Error!!!</h2>;
 
+  const todos = data.data;
 
   return (
-    <div className='todos'>
+    <div className='todolist'>
       <h2>Todo List</h2>
-      <ul className='todos__list'>
+      <ul className='todolist__list'>
         {
           todos.map((todo: ITodo) => (
-            <Todo key={todo.id} todo={todo}/>
+            <Todo key={todo.id} todo={todo} remove={handleDelete} update={handleUpdate}/>
           ))
         }
       </ul>
@@ -42,13 +53,13 @@ export default Todos;
 //   const [deletePost] = postAPI.useDeletePostMutation();
 //   const [updatePost] = postAPI.useUpdatePostMutation();
 
-//   const handleUpdate = (post: IPost) => {
-//     updatePost(post);
-//   };
+  // const handleUpdate = (post: IPost) => {
+  //   updatePost(post);
+  // };
 
-//   const handleDelete = (post: IPost) => {
-//     deletePost(post);
-//   };
+  // const handleDelete = (post: IPost) => {
+  //   deletePost(post);
+  // };
 
   // if (isLoading) return <h2>Loading...</h2>;
 

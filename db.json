@@ -4,7 +4,7 @@
       "id": 1,
       "avatar": "https://www.film.ru/sites/default/files/filefield_paths/shutterstock_9669042a.jpg",
       "author": "Clair",
-      "title": "WORLD PROBLEMS",
+      "title": "World problems",
       "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum cum magni eveniet error animi? Iure, libero? Cumque iure fuga quae.",
       "views": 1000
     },
@@ -15,14 +15,6 @@
       "title": "Ecological troubles",
       "body": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi.",
       "views": 2000
-    },
-    {
-      "id": 3,
-      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2RHj5aBArvQQQtkpqkJU3MzDrr2ji2rg00w&usqp=CAU",
-      "author": "Victor",
-      "title": "My adventures",
-      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, est.",
-      "views": 3000
     },
     {
       "author": "Peter",
