@@ -6,18 +6,18 @@ import Tickets from '../../components/Tickets';
 import './home.scss';
 
 const Home: FC = () => {
-  const [dataName, setDataName] = useState('users');
+    const [dataName, setDataName] = useState('users');
 
-  return (
-    <>
-      <Cards setDataName={setDataName}/>
-      <Chart dataName={dataName} />
-      <div className="info_container">
-        <Tickets/>
-        <Tasks/>
-      </div>
-    </>
-  )
-}
+    return (
+        <>
+            <Cards setDataName={setDataName} />
+            <Chart dataName={dataName} />
+            <div className='info_container'>
+                <Tickets />
+                <Tasks />
+            </div>
+        </>
+    );
+};
 
-export default Home
+export default Home;

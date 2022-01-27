@@ -1,28 +1,26 @@
-import { configureStore } from "@reduxjs/toolkit";
-import { combineReducers } from "redux";
-import authReducer from "./reducers/auth";
-import { postAPI } from "./services/PostService";
-import { productAPI } from "./services/ProductService";
-import { todoAPI } from "./services/TodoService";
-import { userAPI } from "./services/UserService";
-
+import { configureStore } from '@reduxjs/toolkit';
+import { combineReducers } from 'redux';
+import authReducer from './reducers/auth';
+import { serviceAPI } from './services/serviceAPI';
+import { todoAPI } from './services/TodoService';
 
 const rootReducer = combineReducers({
-  authReducer,
-  [productAPI.reducerPath]: productAPI.reducer,
-  [userAPI.reducerPath]: userAPI.reducer,
-  [postAPI.reducerPath]: postAPI.reducer,
-  [todoAPI.reducerPath]: todoAPI.reducer,
-})
+    authReducer,
+    [todoAPI.reducerPath]: todoAPI.reducer,
+    [serviceAPI.reducerPath]: serviceAPI.reducer,
+});
 
 export const setupStore = () => {
-  return configureStore({
-    reducer: rootReducer,
-    middleware: (getDefaultMiddleware) =>
-      getDefaultMiddleware().concat([postAPI.middleware, userAPI.middleware, productAPI.middleware, todoAPI.middleware])
-  })
-}
+    return configureStore({
+        reducer: rootReducer,
+        middleware: (getDefaultMiddleware) =>
+            getDefaultMiddleware().concat([
+                serviceAPI.middleware,
+                todoAPI.middleware,
+            ]),
+    });
+};
 
-export type RootState = ReturnType<typeof rootReducer>
-export type AppStore = ReturnType<typeof setupStore>
-export type AppDispatch = AppStore['dispatch']
+export type RootState = ReturnType<typeof rootReducer>;
+export type AppStore = ReturnType<typeof setupStore>;
+export type AppDispatch = AppStore['dispatch'];

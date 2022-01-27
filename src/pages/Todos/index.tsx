@@ -3,40 +3,50 @@ import Todo from '../../components/Todo';
 import { ITodo } from '../../models/ITodo';
 import { todoAPI } from '../../store/services/TodoService';
 import { Button } from '@material-ui/core';
+import CreateTodo from '../../components/CreateTodo';
 import './todos.scss';
 
 const Todos: FC = () => {
-  const { data, isError, isLoading, refetch } = todoAPI.useFetchAllTodosQuery('');
-  const [deleteTodo] = todoAPI.useDeleteTodoMutation();
-  const [updateTodo] = todoAPI.useUpdateTodoMutation();
+    const { data, isError, isLoading, refetch } =
+        todoAPI.useFetchAllTodosQuery('');
+    const [deleteTodo] = todoAPI.useDeleteTodoMutation();
+    const [updateTodo] = todoAPI.useUpdateTodoMutation();
 
-  const handleUpdate = (todo: ITodo) => {
-    updateTodo(todo);
-  };
+    const handleUpdate = (todo: ITodo) => {
+        updateTodo(todo);
+    };
 
-  const handleDelete = (todo: ITodo) => {
-    deleteTodo(todo);
-  };
+    const handleDelete = (todo: ITodo) => {
+        deleteTodo(todo);
+    };
 
-  if (isLoading) return <h2>Loading...</h2>;
+    if (isLoading) return <h2>Loading...</h2>;
 
-  if (isError) return <h2>Error!!!</h2>;
+    if (isError) return <h2>Error!!!</h2>;
 
-  const todos = data.data;
+    const todos = data.data;
 
-  return (
-    <div className='todolist'>
-      <h2>Todo List</h2>
-      <ul className='todolist__list'>
-        {
-          todos.map((todo: ITodo) => (
-            <Todo key={todo.id} todo={todo} remove={handleDelete} update={handleUpdate}/>
-          ))
-        }
-      </ul>
-      <Button onClick={refetch} variant="contained">Refetch data</Button>
-    </div>
-  );
+    return (
+        <div className='todolist'>
+            <h2>Todo List</h2>
+            <div className='todolist__container'>
+                <CreateTodo />
+                <ul className='todolist__list'>
+                    {todos.map((todo: ITodo) => (
+                        <Todo
+                            key={todo.id}
+                            todo={todo}
+                            remove={handleDelete}
+                            update={handleUpdate}
+                        />
+                    ))}
+                    <Button onClick={refetch} variant='contained'>
+                        Refetch data
+                    </Button>
+                </ul>
+            </div>
+        </div>
+    );
 };
 
 export default Todos;
@@ -53,29 +63,29 @@ export default Todos;
 //   const [deletePost] = postAPI.useDeletePostMutation();
 //   const [updatePost] = postAPI.useUpdatePostMutation();
 
-  // const handleUpdate = (post: IPost) => {
-  //   updatePost(post);
-  // };
+// const handleUpdate = (post: IPost) => {
+//   updatePost(post);
+// };
 
-  // const handleDelete = (post: IPost) => {
-  //   deletePost(post);
-  // };
+// const handleDelete = (post: IPost) => {
+//   deletePost(post);
+// };
 
-  // if (isLoading) return <h2>Loading...</h2>;
+// if (isLoading) return <h2>Loading...</h2>;
 
-  // if (isError) return <h2>Error!!!</h2>;
+// if (isError) return <h2>Error!!!</h2>;
 
 //   return (
 //     <div className='postslist'>
 //       <h2>Post List</h2>
 //       <ul className='postslist__list'>
 //         {
-          // posts.map((post: IPost) => (
-          //   <PostComponent key={post.id} post={post} remove={handleDelete} update={handleUpdate}/>
-          // ))
+// posts.map((post: IPost) => (
+//   <PostComponent key={post.id} post={post} remove={handleDelete} update={handleUpdate}/>
+// ))
 //         }
 //       </ul>
-      // <Button onClick={refetch} variant="contained">Refetch data</Button>
+// <Button onClick={refetch} variant="contained">Refetch data</Button>
 //     </div>
 //   );
 // };

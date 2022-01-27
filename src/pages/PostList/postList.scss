@@ -1,16 +1,25 @@
 .postslist {
-  padding: 30px;
-  background-color: #fff;
-  border: 2px solid rgb(179, 176, 176);
-  border-radius: 20px;
+    padding: 30px;
+    background-color: #fff;
+    border: 2px solid rgb(179, 176, 176);
+    border-radius: 20px;
 
-  h2 {
-    margin: 0 0 50px 0;
-  }
+    h2 {
+        margin: 0 0 50px 0;
+    }
 
-  &__list {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
+    &__list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    &__options {
+        display: flex;
+        justify-content: space-between;
+
+        &_pagination_btns {
+            cursor: pointer;
+        }
+    }
 }

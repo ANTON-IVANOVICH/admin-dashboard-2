@@ -2,7 +2,7 @@ import { FC } from 'react';
 import './createTodo.scss';
 
 const CreateTodo: FC = () => {
-  return <div>CreateTodo</div>;
+    return <div className='createTodo'>CreateTodo</div>;
 };
 
 export default CreateTodo;
