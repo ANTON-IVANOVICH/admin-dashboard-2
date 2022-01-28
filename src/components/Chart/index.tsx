@@ -92,7 +92,7 @@ const Chart: FC<Props> = ({ dataName }) => {
                 <div className='chart'>
                     <h3>{dataName}</h3>
                     <ResponsiveContainer width='100%' height='100%'>
-                        <BarChart width={150} height={40} data={todoData.data}>
+                        <BarChart width={150} height={40} data={todoData}>
                             <Bar dataKey='user_id' fill='#8884d8' />
                         </BarChart>
                     </ResponsiveContainer>

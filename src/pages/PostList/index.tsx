@@ -1,5 +1,5 @@
 import { Button } from '@material-ui/core';
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import PostComponent from '../../components/Post';
 import { IPost } from '../../models/IPost';
 import {
@@ -29,6 +29,8 @@ const PostList: FC = () => {
     const handleDelete = (post: IPost) => {
         deletePost(post);
     };
+
+    // if (posts.length === 0) setInitParameters((prev) => prev);
 
     if (isLoading) return <h2>Loading...</h2>;
 

@@ -36,7 +36,7 @@ const Cards: FC<Props> = ({ setDataName }) => {
             setPostCount(postData.length);
             setUserCount(userData.length);
             setProductCount(productData.length);
-            setTodoCount(todoData.data.length);
+            setTodoCount(todoData.length);
         }
     }, [postData, userData, productData, todoData]);
 

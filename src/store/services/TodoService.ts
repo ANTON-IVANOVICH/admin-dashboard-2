@@ -11,6 +11,7 @@ export const todoAPI = createApi({
     endpoints: (build) => ({
         fetchAllTodos: build.query({
             query: () => '/todos',
+            transformResponse: (response: { data: ITodo[] }) => response.data, //transform res inside
             providesTags: ['Todo'],
         }),
         createTodo: build.mutation<ITodo, ITodo>({
