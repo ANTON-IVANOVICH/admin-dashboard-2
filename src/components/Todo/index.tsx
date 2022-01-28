@@ -63,17 +63,19 @@ const Todo: FC<Props> = ({ todo, remove, update }) => {
             </h3>
             <span className='todo__status status items'>
                 {isUpdateStatus ? (
-                    <input
-                        placeholder='status'
-                        className='todo__changerInput'
+                    <select
                         name='status'
+                        className='todo__changerInput'
                         onChange={(e) =>
                             setTodoObj({
                                 ...todoObj,
                                 [e.target.name]: e.target.value,
                             })
                         }
-                    />
+                    >
+                        <option value='pending'>pending</option>
+                        <option value='completed'>completed</option>
+                    </select>
                 ) : (
                     todo.status
                 )}

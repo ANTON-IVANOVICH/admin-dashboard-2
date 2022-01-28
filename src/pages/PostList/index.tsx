@@ -12,7 +12,7 @@ import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import './postList.scss';
 
 const PostList: FC = () => {
-    const [initParameters, setInitParameters] = useState({ page: 1, limit: 5 });
+    const [initParameters, setInitParameters] = useState({ page: 1, limit: 4 });
     const {
         data: posts,
         isError,

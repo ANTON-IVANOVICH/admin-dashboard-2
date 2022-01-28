@@ -1,273 +1,273 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "avatar": "https://www.film.ru/sites/default/files/filefield_paths/shutterstock_9669042a.jpg",
-      "author": "Clair",
-      "title": "World problems",
-      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum cum magni eveniet error animi? Iure, libero? Cumque iure fuga quae.",
-      "views": 1000
-    },
-    {
-      "id": 2,
-      "avatar": "https://i0.wp.com/post.healthline.com/wp-content/uploads/2021/02/Female_Portrait_1296x728-header-1296x729.jpg?w=1155&h=2268",
-      "author": "John",
-      "title": "Ecological troubles",
-      "body": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi.",
-      "views": 2000
-    },
-    {
-      "author": "Peter",
-      "title": "My sunglasses",
-      "body": "My sunglasses pretty cool! you sos",
-      "avatar": "https://www.exibartstreet.com/wp-content/uploads/avatars/2465/5e0de52aeee8b-bpfull.jpg",
-      "id": 3,
-      "views": 4000
-    },
-    {
-      "author": "Batya",
-      "title": "I am Batya",
-      "body": "Hi Bitches",
-      "avatar": "https://dz2cdn2.dzone.com/storage/user-avatar/534373-thumb.jpg",
-      "id": 4,
-      "views": 5000
-    },
-    {
-      "id": 5,
-      "avatar": "https://www.film.ru/sites/default/files/filefield_paths/shutterstock_9669042a.jpg",
-      "author": "Clair",
-      "title": "World problems",
-      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum cum magni eveniet error animi? Iure, libero? Cumque iure fuga quae.",
-      "views": 1000
-    },
-    {
-      "id": 6,
-      "avatar": "https://i0.wp.com/post.healthline.com/wp-content/uploads/2021/02/Female_Portrait_1296x728-header-1296x729.jpg?w=1155&h=2268",
-      "author": "John",
-      "title": "Ecological troubles",
-      "body": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi.",
-      "views": 2000
-    },
-    {
-      "author": "Peter",
-      "title": "My sunglasses",
-      "body": "My sunglasses pretty cool! you sos",
-      "avatar": "https://www.exibartstreet.com/wp-content/uploads/avatars/2465/5e0de52aeee8b-bpfull.jpg",
-      "id": 320,
-      "views": 4000
-    },
-    {
-      "author": "Batya",
-      "title": "I am Batya",
-      "body": "Hi Bitches",
-      "avatar": "https://dz2cdn2.dzone.com/storage/user-avatar/534373-thumb.jpg",
-      "id": 7,
-      "views": 5000
-    },
-    {
-      "id": 8,
-      "avatar": "https://www.film.ru/sites/default/files/filefield_paths/shutterstock_9669042a.jpg",
-      "author": "Clair",
-      "title": "World problems",
-      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum cum magni eveniet error animi? Iure, libero? Cumque iure fuga quae.",
-      "views": 1000
-    },
-    {
-      "id": 9,
-      "avatar": "https://i0.wp.com/post.healthline.com/wp-content/uploads/2021/02/Female_Portrait_1296x728-header-1296x729.jpg?w=1155&h=2268",
-      "author": "John",
-      "title": "Ecological troubles",
-      "body": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi.",
-      "views": 2000
-    },
-    {
-      "author": "Peter",
-      "title": "My sunglasses",
-      "body": "My sunglasses pretty cool! you sos",
-      "avatar": "https://www.exibartstreet.com/wp-content/uploads/avatars/2465/5e0de52aeee8b-bpfull.jpg",
-      "id": 10,
-      "views": 4000
-    },
-    {
-      "author": "Batya",
-      "title": "I am Batya",
-      "body": "Hi Bitches",
-      "avatar": "https://dz2cdn2.dzone.com/storage/user-avatar/534373-thumb.jpg",
-      "id": 11,
-      "views": 5000
-    },
-    {
-      "id": 12,
-      "avatar": "https://www.film.ru/sites/default/files/filefield_paths/shutterstock_9669042a.jpg",
-      "author": "Clair",
-      "title": "World problems",
-      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum cum magni eveniet error animi? Iure, libero? Cumque iure fuga quae.",
-      "views": 1000
-    },
-    {
-      "id": 13,
-      "avatar": "https://i0.wp.com/post.healthline.com/wp-content/uploads/2021/02/Female_Portrait_1296x728-header-1296x729.jpg?w=1155&h=2268",
-      "author": "John",
-      "title": "Ecological troubles",
-      "body": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi.",
-      "views": 2000
-    },
-    {
-      "author": "Peter",
-      "title": "My sunglasses",
-      "body": "My sunglasses pretty cool! you sos",
-      "avatar": "https://www.exibartstreet.com/wp-content/uploads/avatars/2465/5e0de52aeee8b-bpfull.jpg",
-      "id": 14,
-      "views": 4000
-    },
-    {
-      "author": "Batya",
-      "title": "I am Batya",
-      "body": "Hi Bitches",
-      "avatar": "https://dz2cdn2.dzone.com/storage/user-avatar/534373-thumb.jpg",
-      "id": 15,
-      "views": 5000
-    },
-    {
-      "id": 16,
-      "avatar": "https://www.film.ru/sites/default/files/filefield_paths/shutterstock_9669042a.jpg",
-      "author": "Clair",
-      "title": "World problems",
-      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum cum magni eveniet error animi? Iure, libero? Cumque iure fuga quae.",
-      "views": 1000
-    },
-    {
-      "id": 17,
-      "avatar": "https://i0.wp.com/post.healthline.com/wp-content/uploads/2021/02/Female_Portrait_1296x728-header-1296x729.jpg?w=1155&h=2268",
-      "author": "John",
-      "title": "Ecological troubles",
-      "body": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi.",
-      "views": 2000
-    },
-    {
-      "author": "Peter",
-      "title": "My sunglasses",
-      "body": "My sunglasses pretty cool! you sos",
-      "avatar": "https://www.exibartstreet.com/wp-content/uploads/avatars/2465/5e0de52aeee8b-bpfull.jpg",
-      "id": 18,
-      "views": 4000
-    },
-    {
-      "author": "Batya",
-      "title": "I am Batya",
-      "body": "Hi Bitches",
-      "avatar": "https://dz2cdn2.dzone.com/storage/user-avatar/534373-thumb.jpg",
-      "id": 19,
-      "views": 5000
-    },
-    {
-      "id": 20,
-      "avatar": "https://www.film.ru/sites/default/files/filefield_paths/shutterstock_9669042a.jpg",
-      "author": "Clair",
-      "title": "World problems",
-      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum cum magni eveniet error animi? Iure, libero? Cumque iure fuga quae.",
-      "views": 1000
-    },
-    {
-      "id": 21,
-      "avatar": "https://i0.wp.com/post.healthline.com/wp-content/uploads/2021/02/Female_Portrait_1296x728-header-1296x729.jpg?w=1155&h=2268",
-      "author": "John",
-      "title": "Ecological troubles",
-      "body": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi.",
-      "views": 2000
-    },
-    {
-      "author": "Peter",
-      "title": "My sunglasses",
-      "body": "My sunglasses pretty cool! you sos",
-      "avatar": "https://www.exibartstreet.com/wp-content/uploads/avatars/2465/5e0de52aeee8b-bpfull.jpg",
-      "id": 22,
-      "views": 4000
-    },
-    {
-      "author": "Batya",
-      "title": "I am Batya",
-      "body": "Hi Bitches",
-      "avatar": "https://dz2cdn2.dzone.com/storage/user-avatar/534373-thumb.jpg",
-      "id": 23,
-      "views": 5000
-    }
-  ],
-  "products": [
-    {
-      "id": 24,
-      "title": "headphones",
-      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZHVjdHxlbnwwfHwwfHw%3D&w=1000&q=80",
-      "count": "15",
-      "price": "250"
-    },
-    {
-      "id": 25,
-      "title": "CART",
-      "image": "https://images.pexels.com/photos/2536965/pexels-photo-2536965.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "count": "232",
-      "price": "500"
-    },
-    {
-      "id": 26,
-      "title": "Panasonic",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREf48ilESASX02ivLsP2VyOz8O42vdYzc0uQ&usqp=CAU",
-      "count": "22",
-      "price": "1000"
-    }
-  ],
-  "users": [
-    {
-      "id": 27,
-      "avatar_url": "https://www.interfax.ru/ftproot/textphotos/2021/11/10/e700.jpg",
-      "name": "hi",
-      "username": "username",
-      "email": "hi@mail.com",
-      "getMoney": 1000,
-      "lostMoney": 500,
-      "registration": "2022-10-09T15:14:55.244Z"
-    },
-    {
-      "id": 28,
-      "name": "grisha",
-      "avatar_url": "https://assets.weforum.org/article/image/8yhFmC-8VPS2KKO9cftJ3VxpysCQyfck3Gf0V8OnnJE.jpg",
-      "username": "Ritavsedela",
-      "email": "rita123@gmail.com",
-      "getMoney": 25000,
-      "lostMoney": 250000,
-      "registration": "2022-10-20T15:14:55.244Z"
-    },
-    {
-      "id": 29,
-      "name": "artur",
-      "avatar_url": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/welterweight-champion-manny-pacquiao-and-adrien-broner-pose-news-photo-1095105496-1565087611.jpg?crop=0.464xw:0.700xh;0.0144xw,0.0650xh&resize=480:*",
-      "username": "maxformax",
-      "email": "max999@yandex.ru",
-      "getMoney": 55000,
-      "lostMoney": 20000,
-      "registration": "2022-11-09T15:14:55.244Z"
-    },
-    {
-      "id": 30,
-      "name": "Geo",
-      "avatar_url": "https://www.thefamouspeople.com/profiles/images/og-barack-obama-790.jpg",
-      "username": "username",
-      "email": "geogeogeo@gmail.com",
-      "getMoney": 33333,
-      "lostMoney": 30000,
-      "registration": "2021-11-21T15:14:55.244Z"
-    }
-  ],
-  "authUsers": [
-    {
-      "username": "admin",
-      "password": "admin",
-      "avatar": "https://thumbs.dreamstime.com/z/three-persons-admin-icon-outline-style-vector-web-design-isolated-white-background-179719844.jpg"
-    },
-    {
-      "username": "123",
-      "password": "123",
-      "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
-    }
-  ]
+    "posts": [
+        {
+            "id": 1,
+            "avatar": "https://www.film.ru/sites/default/files/filefield_paths/shutterstock_9669042a.jpg",
+            "author": "Clair",
+            "title": "World problems",
+            "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum cum magni eveniet error animi? Iure, libero? Cumque iure fuga quae.",
+            "views": 1000
+        },
+        {
+            "id": 2,
+            "avatar": "https://i0.wp.com/post.healthline.com/wp-content/uploads/2021/02/Female_Portrait_1296x728-header-1296x729.jpg?w=1155&h=2268",
+            "author": "John",
+            "title": "Ecological troubles",
+            "body": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi.",
+            "views": 2000
+        },
+        {
+            "author": "Peter",
+            "title": "My sunglasses",
+            "body": "My sunglasses pretty cool! you sos",
+            "avatar": "https://www.exibartstreet.com/wp-content/uploads/avatars/2465/5e0de52aeee8b-bpfull.jpg",
+            "id": 3,
+            "views": 4000
+        },
+        {
+            "author": "Batya",
+            "title": "I am Batya",
+            "body": "Hi Bitches",
+            "avatar": "https://dz2cdn2.dzone.com/storage/user-avatar/534373-thumb.jpg",
+            "id": 4,
+            "views": 5000
+        },
+        {
+            "id": 5,
+            "avatar": "https://news.artnet.com/app/news-upload/2021/12/RachelUffner-byJasonFrankRothenberg-2015-750x550.jpg",
+            "author": "Clair",
+            "title": "World problems",
+            "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum cum magni eveniet error animi? Iure, libero? Cumque iure fuga quae.",
+            "views": 1000
+        },
+        {
+            "id": 6,
+            "avatar": "https://nbc16.com/resources/media/36e828c4-51a0-4b8a-4991-2cfa7d8ae1d1-largeScale_AlanMatthews2020_beard_webphoto320x4201.png?1603404381689",
+            "author": "John",
+            "title": "Ecological troubles",
+            "body": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi.",
+            "views": 2000
+        },
+        {
+            "author": "Peter",
+            "title": "My sunglasses",
+            "body": "My sunglasses pretty cool! you sos",
+            "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB2bmYX6lz9CI8oRk_Nh1ljW4u8fWZZsm7cw&usqp=CAU",
+            "id": 320,
+            "views": 4000
+        },
+        {
+            "author": "Batya",
+            "title": "I am Batya",
+            "body": "Hi Bitches",
+            "avatar": "https://i0.wp.com/post.healthline.com/wp-content/uploads/2021/09/Male-Portrait-Wall-Serious-1296x728-Header.jpg?w=1155&h=1528",
+            "id": 7,
+            "views": 5000
+        },
+        {
+            "id": 8,
+            "avatar": "https://cdn.psychologytoday.com/sites/default/files/styles/article-inline-half/public/field_blog_entry_images/2017-09/shutterstock_243101992.jpg?itok=sxfMiTsD",
+            "author": "Clair",
+            "title": "World problems",
+            "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum cum magni eveniet error animi? Iure, libero? Cumque iure fuga quae.",
+            "views": 1000
+        },
+        {
+            "id": 9,
+            "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7Xh9PifMRhzJfnv4DVRnhcFv1DsMB0RtcAQ&usqp=CAU",
+            "author": "John",
+            "title": "Ecological troubles",
+            "body": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi.",
+            "views": 2000
+        },
+        {
+            "author": "Peter",
+            "title": "My sunglasses",
+            "body": "My sunglasses pretty cool! you sos",
+            "avatar": "https://assets-eu-01.kc-usercontent.com/296d8d4d-1c46-01bf-48d9-7c150d2fc3b5/5cc985a7-3b0f-44e5-a05e-0502a71c4b17/%D0%91%D0%BE%D1%80%D0%B8%D1%81%20%D0%9A%D0%B0%D1%80%D0%B0%D1%81%D0%B5%D0%B2,%20CEO%20People%20&%20Screens.jpg?q=75&fm=jpg&w=960",
+            "id": 10,
+            "views": 4000
+        },
+        {
+            "author": "Batya",
+            "title": "I am Batya",
+            "body": "Hi Bitches",
+            "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuVRgEbUUPxuyxnFw1ZPt9_LVc0LYE8uFNhA&usqp=CAU",
+            "id": 11,
+            "views": 5000
+        },
+        {
+            "id": 12,
+            "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5L5ayLN0_PiPmKi7AMtyoPMekAiZNhrpFKw&usqp=CAU",
+            "author": "Clair",
+            "title": "World problems",
+            "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum cum magni eveniet error animi? Iure, libero? Cumque iure fuga quae.",
+            "views": 1000
+        },
+        {
+            "id": 13,
+            "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8X2KQp4hgGR0aApUxLxlhr4UvitaGFstQGA&usqp=CAU",
+            "author": "John",
+            "title": "Ecological troubles",
+            "body": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi.",
+            "views": 2000
+        },
+        {
+            "author": "Peter",
+            "title": "My sunglasses",
+            "body": "My sunglasses pretty cool! you sos",
+            "avatar": "https://www.exibartstreet.com/wp-content/uploads/avatars/2465/5e0de52aeee8b-bpfull.jpg",
+            "id": 14,
+            "views": 4000
+        },
+        {
+            "author": "Batya",
+            "title": "I am Batya",
+            "body": "Hi Bitches",
+            "avatar": "https://dz2cdn2.dzone.com/storage/user-avatar/534373-thumb.jpg",
+            "id": 15,
+            "views": 5000
+        },
+        {
+            "id": 16,
+            "avatar": "https://www.film.ru/sites/default/files/filefield_paths/shutterstock_9669042a.jpg",
+            "author": "Clair",
+            "title": "World problems",
+            "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum cum magni eveniet error animi? Iure, libero? Cumque iure fuga quae.",
+            "views": 1000
+        },
+        {
+            "id": 17,
+            "avatar": "https://i0.wp.com/post.healthline.com/wp-content/uploads/2021/02/Female_Portrait_1296x728-header-1296x729.jpg?w=1155&h=2268",
+            "author": "John",
+            "title": "Ecological troubles",
+            "body": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi.",
+            "views": 2000
+        },
+        {
+            "author": "Peter",
+            "title": "My sunglasses",
+            "body": "My sunglasses pretty cool! you sos",
+            "avatar": "https://www.exibartstreet.com/wp-content/uploads/avatars/2465/5e0de52aeee8b-bpfull.jpg",
+            "id": 18,
+            "views": 4000
+        },
+        {
+            "author": "Batya",
+            "title": "I am Batya",
+            "body": "Hi Bitches",
+            "avatar": "https://dz2cdn2.dzone.com/storage/user-avatar/534373-thumb.jpg",
+            "id": 19,
+            "views": 5000
+        },
+        {
+            "id": 20,
+            "avatar": "https://www.film.ru/sites/default/files/filefield_paths/shutterstock_9669042a.jpg",
+            "author": "Clair",
+            "title": "World problems",
+            "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum cum magni eveniet error animi? Iure, libero? Cumque iure fuga quae.",
+            "views": 1000
+        },
+        {
+            "id": 21,
+            "avatar": "https://i0.wp.com/post.healthline.com/wp-content/uploads/2021/02/Female_Portrait_1296x728-header-1296x729.jpg?w=1155&h=2268",
+            "author": "John",
+            "title": "Ecological troubles",
+            "body": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi.",
+            "views": 2000
+        },
+        {
+            "author": "Peter",
+            "title": "My sunglasses",
+            "body": "My sunglasses pretty cool! you sos",
+            "avatar": "https://www.exibartstreet.com/wp-content/uploads/avatars/2465/5e0de52aeee8b-bpfull.jpg",
+            "id": 22,
+            "views": 4000
+        },
+        {
+            "author": "Batya",
+            "title": "I am Batya",
+            "body": "Hi Bitches",
+            "avatar": "https://dz2cdn2.dzone.com/storage/user-avatar/534373-thumb.jpg",
+            "id": 23,
+            "views": 5000
+        }
+    ],
+    "products": [
+        {
+            "id": 24,
+            "title": "headphones",
+            "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZHVjdHxlbnwwfHwwfHw%3D&w=1000&q=80",
+            "count": "15",
+            "price": "250"
+        },
+        {
+            "id": 25,
+            "title": "CART",
+            "image": "https://images.pexels.com/photos/2536965/pexels-photo-2536965.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+            "count": "232",
+            "price": "500"
+        },
+        {
+            "id": 26,
+            "title": "Panasonic",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREf48ilESASX02ivLsP2VyOz8O42vdYzc0uQ&usqp=CAU",
+            "count": "22",
+            "price": "1000"
+        }
+    ],
+    "users": [
+        {
+            "id": 27,
+            "avatar_url": "https://www.interfax.ru/ftproot/textphotos/2021/11/10/e700.jpg",
+            "name": "hi",
+            "username": "username",
+            "email": "hi@mail.com",
+            "getMoney": 1000,
+            "lostMoney": 500,
+            "registration": "2022-10-09T15:14:55.244Z"
+        },
+        {
+            "id": 28,
+            "name": "grisha",
+            "avatar_url": "https://assets.weforum.org/article/image/8yhFmC-8VPS2KKO9cftJ3VxpysCQyfck3Gf0V8OnnJE.jpg",
+            "username": "Ritavsedela",
+            "email": "rita123@gmail.com",
+            "getMoney": 25000,
+            "lostMoney": 250000,
+            "registration": "2022-10-20T15:14:55.244Z"
+        },
+        {
+            "id": 29,
+            "name": "artur",
+            "avatar_url": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/welterweight-champion-manny-pacquiao-and-adrien-broner-pose-news-photo-1095105496-1565087611.jpg?crop=0.464xw:0.700xh;0.0144xw,0.0650xh&resize=480:*",
+            "username": "maxformax",
+            "email": "max999@yandex.ru",
+            "getMoney": 55000,
+            "lostMoney": 20000,
+            "registration": "2022-11-09T15:14:55.244Z"
+        },
+        {
+            "id": 30,
+            "name": "Geo",
+            "avatar_url": "https://www.thefamouspeople.com/profiles/images/og-barack-obama-790.jpg",
+            "username": "username",
+            "email": "geogeogeo@gmail.com",
+            "getMoney": 33333,
+            "lostMoney": 30000,
+            "registration": "2021-11-21T15:14:55.244Z"
+        }
+    ],
+    "authUsers": [
+        {
+            "username": "admin",
+            "password": "admin",
+            "avatar": "https://thumbs.dreamstime.com/z/three-persons-admin-icon-outline-style-vector-web-design-isolated-white-background-179719844.jpg"
+        },
+        {
+            "username": "123",
+            "password": "123",
+            "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80"
+        }
+    ]
 }

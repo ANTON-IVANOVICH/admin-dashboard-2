@@ -27,23 +27,25 @@ const Todos: FC = () => {
     const todos = data.data;
 
     return (
-        <div className='todolist'>
-            <h2>Todo List</h2>
-            <div className='todolist__container'>
-                <CreateTodo />
-                <ul className='todolist__list'>
-                    {todos.map((todo: ITodo) => (
-                        <Todo
-                            key={todo.id}
-                            todo={todo}
-                            remove={handleDelete}
-                            update={handleUpdate}
-                        />
-                    ))}
-                    <Button onClick={refetch} variant='contained'>
-                        Refetch data
-                    </Button>
-                </ul>
+        <div className='todosPage'>
+            <CreateTodo />
+            <div className='todos__list'>
+                <h2 className='todos__list_title'>Todo List</h2>
+                <div className='todos__list_container'>
+                    <ul className='todos__list_container_list'>
+                        {todos.map((todo: ITodo) => (
+                            <Todo
+                                key={todo.id}
+                                todo={todo}
+                                remove={handleDelete}
+                                update={handleUpdate}
+                            />
+                        ))}
+                        <Button onClick={refetch} variant='contained'>
+                            Refetch data
+                        </Button>
+                    </ul>
+                </div>
             </div>
         </div>
     );

@@ -1,21 +1,27 @@
-.todolist {
+.todosPage {
+    display: flex;
+    max-width: 90%;
+    max-height: 90%;
     padding: 30px;
     background-color: #fff;
     border: 2px solid rgb(179, 176, 176);
     border-radius: 20px;
-
-    h2 {
-        margin: 0 0 50px 0;
-    }
-
-    &__container {
-        display: flex;
-        overflow: hidden;
-    }
+    overflow-y: auto;
 
     &__list {
-        padding: 0;
-        margin: 0;
-        list-style: none;
+        &_title {
+            margin: 0 0 50px 0;
+        }
+
+        &_container {
+            display: flex;
+
+            &_list {
+                max-height: 10%;
+                padding: 15px;
+                margin: 0;
+                list-style: none;
+            }
+        }
     }
 }
