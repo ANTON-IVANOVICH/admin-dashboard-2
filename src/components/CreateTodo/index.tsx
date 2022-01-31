@@ -1,6 +1,6 @@
-import { FC, useState } from 'react';
-import { ITodo } from '../../models/ITodo';
+import React, { FC, useState } from 'react';
 import { todoAPI } from '../../store/services/TodoService';
+import { ITodo } from '../../models/ITodo';
 import './createTodo.scss';
 
 const CreateTodo: FC = () => {
@@ -8,7 +8,9 @@ const CreateTodo: FC = () => {
     const [createTodo, { isError, isLoading }] =
         todoAPI.useCreateTodoMutation();
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleChange = (
+        e: React.ChangeEvent<HTMLSelectElement | HTMLInputElement>
+    ) => {
         const name = e.target.name;
         const value = e.target.value;
         setTodo({ ...todo, [name]: value });
@@ -36,7 +38,11 @@ const CreateTodo: FC = () => {
                 onChange={(e) => handleChange(e)}
                 placeholder='title'
             />
-            <select className='createTodo__select' name='status'>
+            <select
+                className='createTodo__select'
+                name='status'
+                onChange={handleChange}
+            >
                 <option value=''>Choose option</option>
                 <option value='pending'>pending</option>
                 <option value='completed'>completed</option>

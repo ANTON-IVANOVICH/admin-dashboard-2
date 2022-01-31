@@ -7,6 +7,9 @@ const CreateUser: FC = () => {
     const [user, setUser] = useState({} as IUser);
     const [createUser, { isError, isLoading }] = useCreateUserMutation();
 
+    // new FormData - экземпляр класса
+    // Object.fromEntries
+
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const name = e.target.name;
         const value = e.target.value;

@@ -17,7 +17,7 @@ const CreatePost: FC = () => {
         e.preventDefault();
         if (post.title && post.author && post.body) {
             const id = new Date().getTime();
-            createPost({ ...post, id });
+            createPost({ ...post, id, publication_date: new Date() });
             setPost({ title: '', author: '', body: '', avatar: '' } as IPost);
         }
     };

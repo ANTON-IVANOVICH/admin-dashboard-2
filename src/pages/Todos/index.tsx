@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import Todo from '../../components/Todo';
+import CreateTodo from '../../components/CreateTodo';
 import { ITodo } from '../../models/ITodo';
 import { todoAPI } from '../../store/services/TodoService';
 import { Button } from '@material-ui/core';
-import CreateTodo from '../../components/CreateTodo';
 import './todos.scss';
 
 const Todos: FC = () => {

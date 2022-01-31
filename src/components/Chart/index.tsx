@@ -80,7 +80,7 @@ const Chart: FC<Props> = ({ dataName }) => {
                             <Bar dataKey='views' barSize={20} fill='#413ea0' />
                             <Line
                                 type='monotone'
-                                dataKey='views'
+                                dataKey='publication_date'
                                 stroke='#ff7300'
                             />
                         </ComposedChart>
@@ -127,24 +127,3 @@ const Chart: FC<Props> = ({ dataName }) => {
 };
 
 export default Chart;
-
-// const { data: userData } = userAPI.useFetchAllUsersQuery('');
-// const { data: postData } = postAPI.useFetchAllPostsQuery('');
-// const { data: productData } = productAPI.useFetchAllProductsQuery('');
-
-// return (
-//   <div className='chart'>
-//     <h3>Today's Trends</h3>
-//     <ResponsiveContainer width="100%" height="80%">
-//       <LineChart data={obj[dataName]} >
-//         <CartesianGrid strokeDasharray="3 3" />
-//         <XAxis dataKey="name" />
-//         <YAxis />
-//         <Legend />
-//         <Line type="monotone" dataKey="getMoney" stroke="#00ff62" />
-//         <Line type="monotone" dataKey="lostMoney" stroke="#ff0000" />
-//         <Tooltip />
-//       </LineChart>
-//     </ResponsiveContainer>
-//   </div>
-// );

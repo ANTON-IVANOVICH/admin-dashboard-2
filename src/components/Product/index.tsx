@@ -1,58 +1,86 @@
-import React, { FC, useState } from 'react'
+import React, { FC, useState } from 'react';
 import { Delete } from '@material-ui/icons';
 import { IProduct } from '../../models/IProduct';
 import BorderColorSharp from '@material-ui/icons/BorderColorSharp';
-import './product.scss'
+import './product.scss';
 
 type Props = {
-  productItem: IProduct;
-  remove: (product: IProduct) => void;
-  update: (product: IProduct) => void;
-}
+    productItem: IProduct;
+    remove: (product: IProduct) => void;
+    update: (product: IProduct) => void;
+};
 
 const Product: FC<Props> = ({ productItem, remove, update }) => {
-  const [product, setProduct] = useState(productItem);
-  const [isChange, setIsChange] = useState(false);
+    const [product, setProduct] = useState(productItem);
+    const [isChange, setIsChange] = useState(false);
 
-  const handleUpdate = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const name = e.target.name;
-    const value = e.target.value;
-    setProduct({ ...product, [name]: value });
-  };
-  
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    update(product);
-    setIsChange(false);
-  };
+    const handleUpdate = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const name = e.target.name;
+        const value = e.target.value;
+        setProduct({ ...product, [name]: value });
+    };
 
-  const handleDelete = () => {
-    remove(product);
-  };
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        update(product);
+        setIsChange(false);
+    };
 
-  //type='number' not work
+    const handleDelete = () => {
+        remove(product);
+    };
 
-  if (isChange) {
+    //type='number' not work
+
+    if (isChange) {
+        return (
+            <form className='product' onSubmit={(e) => handleSubmit(e)}>
+                <input
+                    className='product__changerInput'
+                    placeholder='title'
+                    name='title'
+                    onChange={(e) => handleUpdate(e)}
+                />
+                <input
+                    className='product__changerInput'
+                    placeholder='count'
+                    name='count'
+                    onChange={(e) => handleUpdate(e)}
+                />
+                <input
+                    className='product__changerInput'
+                    placeholder='price'
+                    name='price'
+                    onChange={(e) => handleUpdate(e)}
+                />
+                <button className='product__changerBtn' type='submit'>
+                    <BorderColorSharp />
+                </button>
+            </form>
+        );
+    }
+
     return (
-      <form className='product' onSubmit={e => handleSubmit(e)}>
-        <input className='product__changerInput' placeholder='title' name='title' onChange={e => handleUpdate(e)}/>
-        <input className='product__changerInput' placeholder='count' name='count' onChange={e => handleUpdate(e)}/>
-        <input className='product__changerInput' placeholder='price' name='price' onChange={e => handleUpdate(e)}/>
-        <button className='product__changerBtn' type='submit'><BorderColorSharp/></button>
-      </form>
-    )
-  }
-  
-  return (
-    <li className="product">
-      <img className='product__img img' src={product.image} alt={product.title} />
-      <h3 className="product__title title">{product.title}</h3>
-      <h4 className="product__count count">{product.count}</h4>
-      <span className="product__price price">{product.price}</span>
-      <button className='product__btn update' onClick={() => setIsChange(true)}><BorderColorSharp/></button>
-      <button className="product__btn delete" onClick={handleDelete}><Delete/></button>
-    </li>
-  );
+        <li className='product'>
+            <img
+                className='product__img img'
+                src={product.image}
+                alt={product.title}
+            />
+            <h3 className='product__title title'>{product.title}</h3>
+            <h4 className='product__count count'>{product.count}</h4>
+            <span className='product__price price'>{product.price}</span>
+            <button
+                className='product__btn update'
+                onClick={() => setIsChange(true)}
+            >
+                <BorderColorSharp />
+            </button>
+            <button className='product__btn delete' onClick={handleDelete}>
+                <Delete />
+            </button>
+        </li>
+    );
 };
 
 export default Product;

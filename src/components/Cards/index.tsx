@@ -16,6 +16,7 @@ const Cards: FC<Props> = ({ setDataName }) => {
     const [userCount, setUserCount] = useState(0);
     const [productCount, setProductCount] = useState(0);
     const [todoCount, setTodoCount] = useState(0);
+
     const { data: postData } = useFetchAllPostsQuery({});
     const { data: userData } = useFetchAllUsersQuery({});
     const { data: productData } = useFetchAllProductsQuery({});

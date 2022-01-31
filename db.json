@@ -6,7 +6,8 @@
       "author": "Clair",
       "title": "World problems",
       "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum cum magni eveniet error animi? Iure, libero? Cumque iure fuga quae.",
-      "views": 1000
+      "views": 1000,
+      "publication_date": "2022-01-31T05:16:10.475Z"
     },
     {
       "id": 2,
@@ -14,7 +15,8 @@
       "author": "John",
       "title": "ecological TROUBLES",
       "body": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi.",
-      "views": 2000
+      "views": 2000,
+      "publication_date": "2022-01-30T05:16:10.475Z"
     },
     {
       "author": "Peter",
@@ -22,7 +24,8 @@
       "body": "My sunglasses pretty cool! you sos",
       "avatar": "https://www.exibartstreet.com/wp-content/uploads/avatars/2465/5e0de52aeee8b-bpfull.jpg",
       "id": 3,
-      "views": 4000
+      "views": 4000,
+      "publication_date": "2022-01-29T05:16:10.475Z"
     },
     {
       "author": "Batya",
@@ -30,7 +33,8 @@
       "body": "Hi Bitches",
       "avatar": "https://dz2cdn2.dzone.com/storage/user-avatar/534373-thumb.jpg",
       "id": 4,
-      "views": 5000
+      "views": 5000,
+      "publication_date": "2022-01-29T05:16:10.475Z"
     },
     {
       "id": 5,
@@ -38,7 +42,8 @@
       "author": "Robert",
       "title": "Ecology boom",
       "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum cum magni eveniet error animi? Iure, libero? Cumque iure fuga quae.",
-      "views": 1000
+      "views": 1000,
+      "publication_date": "2022-01-28T05:16:10.475Z"
     },
     {
       "id": 6,
@@ -46,7 +51,8 @@
       "author": "Gennadiy",
       "title": "News",
       "body": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi.",
-      "views": 2000
+      "views": 2000,
+      "publication_date": "2022-01-27T05:16:10.475Z"
     },
     {
       "author": "Mark",
@@ -54,7 +60,8 @@
       "body": "My sunglasses pretty cool! you sos",
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB2bmYX6lz9CI8oRk_Nh1ljW4u8fWZZsm7cw&usqp=CAU",
       "id": 320,
-      "views": 4000
+      "views": 4000,
+      "publication_date": "2022-01-26T05:16:10.475Z"
     },
     {
       "author": "Olya",
@@ -62,7 +69,8 @@
       "body": "Hi Bitches",
       "avatar": "https://i0.wp.com/post.healthline.com/wp-content/uploads/2021/09/Male-Portrait-Wall-Serious-1296x728-Header.jpg?w=1155&h=1528",
       "id": 7,
-      "views": 5000
+      "views": 5000,
+      "publication_date": "2022-01-25T05:16:10.475Z"
     },
     {
       "id": 8,
@@ -70,7 +78,8 @@
       "author": "Evan",
       "title": "Jerry",
       "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum cum magni eveniet error animi? Iure, libero? Cumque iure fuga quae.",
-      "views": 1000
+      "views": 1000,
+      "publication_date": "2022-01-24T05:16:10.475Z"
     },
     {
       "id": 9,
@@ -78,7 +87,8 @@
       "author": "Zed",
       "title": "Moments",
       "body": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi.",
-      "views": 2000
+      "views": 2000,
+      "publication_date": "2022-01-23T05:16:10.475Z"
     },
     {
       "author": "Pavel",
@@ -86,7 +96,8 @@
       "body": "dasassssssssssssssss",
       "avatar": "https://assets-eu-01.kc-usercontent.com/296d8d4d-1c46-01bf-48d9-7c150d2fc3b5/5cc985a7-3b0f-44e5-a05e-0502a71c4b17/%D0%91%D0%BE%D1%80%D0%B8%D1%81%20%D0%9A%D0%B0%D1%80%D0%B0%D1%81%D0%B5%D0%B2,%20CEO%20People%20&%20Screens.jpg?q=75&fm=jpg&w=960",
       "id": 10,
-      "views": 4000
+      "views": 4000,
+      "publication_date": "2022-01-22T05:16:10.475Z"
     },
     {
       "author": "Batya",
@@ -94,7 +105,8 @@
       "body": "Hi Bitches",
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuVRgEbUUPxuyxnFw1ZPt9_LVc0LYE8uFNhA&usqp=CAU",
       "id": 11,
-      "views": 5000
+      "views": 5000,
+      "publication_date": "2022-01-21T05:16:10.475Z"
     },
     {
       "id": 12,
@@ -102,7 +114,8 @@
       "author": "Clair",
       "title": "World problems",
       "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum cum magni eveniet error animi? Iure, libero? Cumque iure fuga quae.",
-      "views": 1000
+      "views": 1000,
+      "publication_date": "2022-01-21T05:16:10.475Z"
     },
     {
       "id": 13,
@@ -110,7 +123,8 @@
       "author": "John",
       "title": "Ecological troubles",
       "body": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi.",
-      "views": 2000
+      "views": 2000,
+      "publication_date": "2022-01-20T05:16:10.475Z"
     },
     {
       "author": "Peter",
@@ -118,7 +132,8 @@
       "body": "My sunglasses pretty cool! you sos",
       "avatar": "https://www.exibartstreet.com/wp-content/uploads/avatars/2465/5e0de52aeee8b-bpfull.jpg",
       "id": 14,
-      "views": 4000
+      "views": 4000,
+      "publication_date": "2022-01-19T05:16:10.475Z"
     },
     {
       "author": "Batya",
@@ -126,7 +141,8 @@
       "body": "Hi Bitches",
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_lB0zHrt60hoQLrfN_6yRD38TDrxrhgsw1Q&usqp=CAU",
       "id": 15,
-      "views": 5000
+      "views": 5000,
+      "publication_date": "2022-01-19T05:16:10.475Z"
     },
     {
       "id": 16,
@@ -134,7 +150,8 @@
       "author": "Clair",
       "title": "World problems",
       "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum cum magni eveniet error animi? Iure, libero? Cumque iure fuga quae.",
-      "views": 1000
+      "views": 1000,
+      "publication_date": "2022-01-18T05:16:10.475Z"
     },
     {
       "id": 17,
@@ -142,7 +159,8 @@
       "author": "John",
       "title": "Ecological troubles",
       "body": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi.",
-      "views": 2000
+      "views": 2000,
+      "publication_date": "2022-01-17T05:16:10.475Z"
     },
     {
       "author": "Peter",
@@ -150,7 +168,8 @@
       "body": "My sunglasses pretty cool! you sos",
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcJAfEXywyM6bSaRs-p7d4PFeBXMb9bYHo1A&usqp=CAU",
       "id": 18,
-      "views": 4000
+      "views": 4000,
+      "publication_date": "2022-01-16T05:16:10.475Z"
     },
     {
       "author": "Batya",
@@ -158,7 +177,8 @@
       "body": "Hi Bitches",
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzaQXE9IyX5-GswY7ADCw7i4Sn9iWYeFhhYw&usqp=CAU",
       "id": 19,
-      "views": 5000
+      "views": 5000,
+      "publication_date": "2022-01-15T05:16:10.475Z"
     },
     {
       "id": 20,
@@ -166,7 +186,8 @@
       "author": "Clair",
       "title": "World problems",
       "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum cum magni eveniet error animi? Iure, libero? Cumque iure fuga quae.",
-      "views": 1000
+      "views": 1000,
+      "publication_date": "2022-01-14T05:16:10.475Z"
     },
     {
       "id": 21,
@@ -174,7 +195,8 @@
       "author": "John",
       "title": "Ecological troubles",
       "body": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi.",
-      "views": 2000
+      "views": 2000,
+      "publication_date": "2022-01-13T05:16:10.475Z"
     },
     {
       "author": "Peter",
@@ -182,7 +204,8 @@
       "body": "My sunglasses pretty cool! you sos",
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStktAVwIe6xnl3UVjsNhPVdhKr6ZZRC50hGQ&usqp=CAU",
       "id": 22,
-      "views": 4000
+      "views": 4000,
+      "publication_date": "2022-01-13T05:16:10.475Z"
     },
     {
       "author": "Batya",
@@ -190,7 +213,8 @@
       "body": "Hi Bitches",
       "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeS5fKFsqxVHLiH6rtktFAHe9SR4TlVDwcCg&usqp=CAU",
       "id": 23,
-      "views": 5000
+      "views": 5000,
+      "publication_date": "2022-01-14T05:16:10.475Z"
     }
   ],
   "products": [
